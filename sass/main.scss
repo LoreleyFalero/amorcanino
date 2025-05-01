@@ -1,0 +1,14 @@
+@use "sass/variables" as *;
+@use "sass/mixin" as *;
+@use "sass/reset" as *;
+
+// Importar páginas
+@use "sass/index" as *;     
+@use "sass/servicios" as *;    
+@use "sass/galeria" as *;    
+@use "sass/contacto" as *;    
+@use "sass/agenda" as *;       
+@use "sass/header" as *;       
+@use "sass/footer" as *;      
+@use "sass/componentes" as *;    
+@use "sass/responsive" as *;    

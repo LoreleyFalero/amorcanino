@@ -1,0 +1,16 @@
+// Mixin para sombras
+@mixin box-shadow($shadow: $box-shadow) {
+    box-shadow: $shadow;
+}
+
+  // Mixin para borde redondeado
+@mixin border-radius($radius: 10px) {
+    border-radius: $radius;
+}
+
+  // Mixin para fuentes
+@mixin font($size, $weight, $line-height: 1.5) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+}

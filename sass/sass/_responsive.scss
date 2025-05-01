@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+    // Barra de navegación
+    nav {
+    flex-direction: column;
+    gap: $gap-medium;
+    }
+
+    .menu {
+    flex-direction: column;
+    gap: $gap-medium;
+    }
+
+    // Títulos
+    .tituloprincipalinicio, .tituloprincipalinicioservicios {
+    font-size: 25px;
+    white-space: normal;
+    }
+
+    // Fondo rosa
+    .fondorosa {
+    display: block;
+    width: 90%;
+    font-size: 18px;
+    padding: $padding-small;
+    margin: 20px auto;
+    }
+
+    // Párrafos
+    p {
+    width: 90%;
+    font-size: 16px;
+    padding: 10px;
+    margin: auto;
+    }
+
+    // Imagen de inicio
+    .imageninicio {
+    position: static;
+    text-align: center;
+    margin: 20px auto;
+    }
+
+    // Footer
+    footer {
+    flex-direction: column;
+    font-size: 14px;
+    position: static;
+    padding: $padding-small;
+    }
+}

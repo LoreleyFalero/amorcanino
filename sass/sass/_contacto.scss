@@ -1,0 +1,32 @@
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    background: $color-blanco;
+    padding: $padding-large;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: $padding-small;
+    margin-bottom: $padding-small;
+    border: 1px solid $color-gris;
+    border-radius: 5px;
+}
+
+.formulario-contacto button {
+    background: $color-rosa;
+    color: $color-blanco;
+    padding: $padding-small;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.formulario-contacto button:hover {
+    background: darken($color-rosa, 10%);
+}

@@ -1,0 +1,20 @@
+.inicio {
+    text-align: center;
+    padding: $padding-large;
+    background-color: $color-rosa;
+}
+
+.inicio h1 {
+    font-size: 50px;
+    font-family: $font-primary;
+    color: $color-blanco;
+}
+
+.inicio p {
+    font-size: 20px;
+    color: $color-blanco;
+}
+
+.section {
+    padding: variables.$padding-large;
+}
