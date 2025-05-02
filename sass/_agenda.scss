@@ -1,0 +1,137 @@
+// _variables.scss
+$primary-bg-color: #ededed;
+$primary-font-family: Verdana, Geneva, Tahoma, sans-serif;
+$secondary-font-family: Arial, Helvetica, sans-serif;
+$font-size-title: 35px;
+$font-size-heading: 30px;
+$font-size-label: 15px;
+$font-size-input: 16px;
+$input-border-color: #999;
+$button-padding: 15px;
+$form-padding: 30px;
+$form-box-shadow: 0px 0px 35px #0006;
+$form-border-radius: 8px;
+$iframe-height: 300px;
+$iframe-height-mobile: 220px;
+$heading-margin-bottom: 70px;
+
+// _reset.scss
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// _agenda.scss
+.reservesuturno {
+    color: black;
+    font-size: $font-size-title;
+    font-family: $primary-font-family;
+    font-weight: 900;
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: $heading-margin-bottom;
+    padding: $button-padding;
+}
+
+form {
+    background-color: $primary-bg-color;
+    padding: $form-padding;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: $form-box-shadow;
+    border-radius: $form-border-radius;
+}
+
+.forminput {
+    padding: 6px 20px;
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px;
+    border: none;
+    border-left: 3px solid $input-border-color;
+}
+
+textarea {
+    min-width: 100%;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 200px;
+    font-family: sans-serif;
+}
+
+form h2 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: $font-size-heading;
+    font-family: $primary-font-family;
+}
+
+label {
+    font-size: $font-size-label;
+    line-height: 2;
+    text-transform: uppercase;
+    font-family: $secondary-font-family;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+iframe {
+    display: block;
+    margin: 20px auto;
+    border: none;
+    max-width: 100%;
+    height: $iframe-height;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    .reservesuturno {
+        font-size: 26px;
+        white-space: normal;
+        padding: 10px;
+        margin-bottom: 40px;
+    }
+
+    form {
+        padding: 20px;
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    .forminput {
+        padding: 10px 0;
+    }
+
+    input, textarea {
+        font-size: $font-size-input;
+    }
+
+    form h2 {
+        font-size: 24px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    iframe {
+        height: $iframe-height-mobile;
+    }
+}

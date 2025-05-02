@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+.imageninicio {
+    position: absolute;
+    bottom: 140px;
+    left: 1260px;
+    overflow: hidden;
+    display: inline-block;
+    
+    img {
+        transition: transform 0.5s ease-in-out;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    &:hover img {
+        transform: scale(1.1);
+    }
+    }
+    
+    p {
+    color: $color-texto;
+    font-family: $fuente-secundaria;
+    font-size: $tamanio-texto;
+    width: 45%;
+    padding: 20px;
+    margin: 0;
+    }

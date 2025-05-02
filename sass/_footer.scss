@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+// _footer.scss
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $tamanio-texto;
+    text-align: center; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    p {
+        color: $color-footer;
+        font-size: $tamanio-texto-chico;
+        font-family: $fuente-general;
+    }
+    }
+
+    $tamanio-texto: 18px;
+$tamanio-texto-chico: 14px;
+$color-footer: black;
+$fuente-general: "Arial", sans-serif;

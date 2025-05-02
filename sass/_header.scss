@@ -1,0 +1,96 @@
+@use 'variables' as *;
+
+body {
+background-color: $color-fondo !important;
+font-family: $fuente-general;
+min-height: 100vh;
+width: 100%;
+}
+
+nav {
+display: flex;
+font-family: $fuente-general; // Reemplazado $fuente-secundaria
+text-align: center;
+align-items: center;
+justify-content: space-between; 
+text-transform: uppercase;
+letter-spacing: 5px;
+word-spacing: 90px;
+font-size: 20px;
+width: 100%;
+padding: 15px 20px;
+background: $color-rosa; // Reemplazado $color-secundario
+
+.logo img {
+    display: block;
+    height: 100px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 80px;
+    width: 100%;
+
+    a {
+      color: $color-titulo; // Reemplazado $color-texto
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    }
+}
+}
+
+.tituloprincipalinicio {
+color: $color-titulo; // Reemplazado $color-texto
+font-size: 35px; // Reemplazado $tamanio-titulo
+font-family: $fuente-principal; // Reemplazado $fuente-titulos
+font-weight: 900;
+white-space: nowrap;
+text-align: center;
+margin-bottom: 70px;
+padding: 15px;
+
+h1 {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+}
+
+@keyframes fadeInUp {
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+.titulosecundario {
+color: $color-titulo; // Reemplazado $color-texto
+font-family: $fuente-general; // Reemplazado $fuente-secundaria
+font-size: 30px;
+display: inline-block;
+width: 43%;
+text-align: right;
+margin-top: 10px;
+}
+
+li {
+color: white;
+text-decoration: underline;
+}
+
+.fondorosa {
+background: $color-rosa; // Reemplazado $color-principal
+font-family: $fuente-general; // Reemplazado $fuente-secundaria
+white-space: nowrap;
+display: inline-block;
+font-size: 30px;
+padding: 40px;
+margin: 50px;
+max-width: 55%;
+border-radius: 20px;
+box-shadow: 0px 0px 15px rgba(0,0,0,0.2); // Reemplazado $sombra-general
+}

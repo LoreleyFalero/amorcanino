@@ -1,0 +1,167 @@
+// _variables.scss
+$primary-color: #B14890;
+$btn-success-bg-color: #28a745;  // Color de fondo del botón WhatsApp
+$font-family-main: Verdana, Geneva, Tahoma, sans-serif;
+$font-family-alt: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$font-size-title: 35px;
+$font-size-info: 20px;
+$font-size-text: 16px;
+$button-padding: 15px;
+$mapa-height: 400px;
+$mapa-height-mobile: 250px;
+
+// _reset.scss
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// _contacto.scss
+.contacto {
+    color: black;
+    font-size: $font-size-title;
+    font-family: $font-family-main;
+    font-weight: 900;
+    white-space: nowrap;
+    text-align: center;
+    padding: $button-padding;
+}
+
+.informacion { 
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    padding: 20px;
+    background-color: $primary-color;
+    border-radius: 8px;
+    margin-top: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 950px;
+    margin: 100px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.detalle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+
+.titulo {
+    font-family: $font-family-main;
+    font-weight: bold;
+    font-size: $font-size-info;
+    margin-right: 6px;
+}
+
+p {
+    margin: 0;
+}
+
+.instagram-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.instagram-box {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-text;
+}
+
+.logo-instagram {
+    width: 50px;
+    height: auto;
+}
+
+.texto-instagram {
+    color: black;
+    font-family: $font-family-alt;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.teesperamos {
+    color: black;
+    font-family: $font-family-alt;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+    margin-left: 700px;
+}
+
+.mapa {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 30px;
+    height: $mapa-height;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    .contacto {
+        font-size: 26px;
+        white-space: normal;
+        padding: 10px;
+    }
+
+    .informacion {
+        width: 100%;
+        margin: 30px 10px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .detalle {
+        flex-direction: column;
+        align-items: flex-start;
+        white-space: normal;
+        margin-bottom: 12px;
+    }
+
+    .titulo {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+
+    .texto-instagram,
+    .teesperamos {
+        flex-direction: column;
+        text-align: center;
+        white-space: normal;
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .instagram-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instagram-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo-instagram {
+        width: 40px;
+    }
+
+    .mapa {
+        height: $mapa-height-mobile;
+        margin: 20px 10px;
+    }
+}
