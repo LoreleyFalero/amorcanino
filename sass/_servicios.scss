@@ -13,13 +13,6 @@ $font-size-subtitle: 30px;
 $font-size-service-title: 25px;
 $font-size-list: 18px;
 
-// _reset.scss
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 nav {
     display: flex;
     font-family: $fuente-principal;
@@ -141,4 +134,8 @@ nav {
     .titulosecundarioservicios {
         font-size: 20px;
     }
+}
+
+body {
+    background-color: #f0f0f0;
 }

@@ -176,10 +176,16 @@ $font-size-service-title: 25px;
 $font-size-list: 18px;
 
 // _reset.scss
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 // _servicios.scss
@@ -360,3 +366,15 @@ $mapa-height-mobile: 250px;
     padding: 0;
     box-sizing: border-box;
     }
+
+    // Mixin para sombra
+@mixin sombra($x: 0, $y: 8px, $blur: 24px, $color: rgba(0, 0, 0, 0.4)) {
+    box-shadow: $x $y $blur $color;
+}
+
+  // Mixin para texto transformado
+@mixin texto-transformado($tamano: $fuente-grande, $espaciado: $espaciado) {
+    font-size: $tamano;
+    text-transform: uppercase;
+    letter-spacing: $espaciado;
+}
