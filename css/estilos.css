@@ -439,6 +439,7 @@ nav .menu a {
   white-space: nowrap;
   text-align: center;
   padding: 15px;
+  font-size: 4rem;
 }
 
 .informacion {
@@ -931,7 +932,7 @@ html, body {
   box-sizing: border-box;
 }
 
-.contacto h1 {
+.contacto {
   color: black;
   font-size: 35px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -939,6 +940,7 @@ html, body {
   white-space: nowrap;
   text-align: center;
   padding: 15px;
+  font-size: 4rem;
 }
 
 .informacion {
