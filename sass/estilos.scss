@@ -18,16 +18,21 @@ body {
     width: 100%;
 }
 
-// Título principal
-.tituloprincipalinicio {
-    color: black;
-    font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.titulo-base {
+    font-family: $fuente-principal;
     font-weight: 900;
-    white-space: nowrap;
     text-align: center;
     margin-bottom: 70px;
     padding: 15px;
+}
+
+// Título principal
+.tituloprincipalinicio {
+    @extend .titulo-base;
+    color: black;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    white-space: nowrap;
 }
 
 // Título secundario
@@ -376,7 +381,6 @@ $mapa-height-mobile: 250px;
     white-space: nowrap;
     text-align: center;
     padding: $button-padding;
-    font-size: 4rem;
 }
 
 .informacion { 
