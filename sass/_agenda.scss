@@ -100,38 +100,3 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
-
-@media (max-width: 768px) {
-    .reservesuturno {
-        font-size: 26px;
-        white-space: normal;
-        padding: 10px;
-        margin-bottom: 40px;
-    }
-
-    form {
-        padding: 20px;
-        margin: 10px;
-        max-width: 100%;
-    }
-
-    .forminput {
-        padding: 10px 0;
-    }
-
-    input, textarea {
-        font-size: $font-size-input;
-    }
-
-    form h2 {
-        font-size: 24px;
-    }
-
-    label {
-        font-size: 14px;
-    }
-
-    iframe {
-        height: $iframe-height-mobile;
-    }
-}

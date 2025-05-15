@@ -112,26 +112,3 @@ nav {
     padding: 6px 0;
     text-decoration: none;
 }
-
-// _responsive.scss
-@media (max-width: 768px) {
-    .contenedor {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 20px;
-    }
-
-    .lista {
-        width: 90%;
-        padding: 30px;
-    }
-
-    .tituloprincipalinicioservicios {
-        font-size: 28px;
-        white-space: normal;
-    }
-
-    .titulosecundarioservicios {
-        font-size: 20px;
-    }
-}

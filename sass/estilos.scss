@@ -9,6 +9,7 @@
 @use 'galeria';
 @use 'contacto';
 @use 'agenda';
+@use 'mediaqueries';
 
 // Estilo general
 body {
@@ -101,71 +102,6 @@ p {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-// MEDIA QUERIES
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        word-spacing: normal;
-        gap: 10px;
-    }
-
-    .menu {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .tituloprincipalinicio {
-        font-size: 25px;
-        white-space: normal;
-    }
-
-    .titulosecundario {
-        width: 100%;
-        font-size: 22px;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .fondorosa {
-        display: block;
-        white-space: normal;
-        width: 90%;
-        font-size: 18px;
-        padding: 20px;
-        margin: 20px auto;
-        text-align: left;
-    }
-
-    p {
-        width: 90%;
-        font-size: 16px;
-        padding: 10px;
-        margin: auto;
-    }
-
-    .imageninicio {
-        position: static;
-        text-align: center;
-        margin: 20px auto;
-    }
-
-    .imageninicio img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
-
-    footer {
-        flex-direction: column;
-        font-size: 14px;
-        padding: 20px;
     }
 }
 

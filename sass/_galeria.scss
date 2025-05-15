@@ -58,14 +58,3 @@ $carousel-max-width: 800px;
     background-color: $active-indicator-color;
     opacity: 1;
 }
-
-// _responsive.scss
-@media (max-width: 768px) {
-    #carouselExampleIndicators {
-        max-width: 100%;
-    }
-
-    .carousel-item img {
-        height: auto;
-    }
-}
