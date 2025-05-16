@@ -7,52 +7,113 @@
     padding: 10px;
 }
 
+section {
+background-color: variables.$color-fondo-rosa;
+padding: 30px;
+border-radius: 15px;
+max-width: 900px;
+margin: 40px auto; // centrado horizontal con margen arriba/abajo
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 25px;
+
 .informacion {
     width: 100%;
-    margin: 30px 10px;
-    padding: 15px;
-    box-sizing: border-box;
-}
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 10px;
 
 .detalle {
-    flex-direction: column;
-    align-items: flex-start;
-    white-space: normal;
-    margin-bottom: 12px;
+margin-bottom: 10px;
+
+    .titulo {
+        font-weight: bold;
+        font-size: variables.$tamano-texto-md;
+        margin-bottom: 5px;
+    }
+    }
 }
 
-.titulo {
-    font-size: variables.$tamano-texto-sm;
-    margin-bottom: 4px;
+.mapa {
+    width: 100%;
+    max-width: 700px;
+
+    iframe {
+    width: 100% !important;
+    height: 400px !important;
+    border: none;
+    border-radius: 10px;
+    }
 }
 
-.texto-instagram,
-.teesperamos {
-    flex-direction: column;
+a.btn.btn-success {
+    padding: 12px 30px;
+    font-size: variables.$tamano-texto-md;
+    border-radius: 10px;
+    max-width: 200px;
+    width: 100%;
     text-align: center;
-    white-space: normal;
-    margin-left: 0;
-    font-size: variables.$tamano-texto-xs;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+    background-color: darken(#198754, 10%);
+    }
 }
 
 .instagram-container {
-    flex-direction: column;
-    align-items: center;
-}
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 
-.instagram-box {
-    flex-direction: column;
+    .instagram-box {
+    display: flex;
     align-items: center;
     gap: 10px;
+
+    .logo-instagram {
+        width: 40px;
+    }
+    }
 }
 
-.logo-instagram {
-    width: 40px;
+.teesperamos {
+    font-size: variables.$tamano-texto-sm;
+    margin-top: 20px;
+}
+}
+
+.informacion {
+    margin: 20px 0;
+    padding: 10px;
 }
 
 .mapa {
     height: variables.$mapa-height-mobile;
-    margin: 20px 10px;
+    margin: 15px 0;
+}
+
+a.btn.btn-success {
+    max-width: 100%;
+    font-size: variables.$tamano-texto-sm;
+}
+
+.instagram-container {
+    flex-direction: column;
+    .instagram-box {
+    flex-direction: column;
+    gap: 8px;
+
+    .logo-instagram {
+        width: 35px;
+    }
+    }
+}
+
+.teesperamos {
+    font-size: variables.$tamano-texto-xs;
 }
 }
 
