@@ -291,6 +291,15 @@ $carousel-max-width: 800px;
     opacity: 1;
 }
 
+.wrapper {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+main {
+flex: 1;
+}
 // _responsive.scss
 @media (max-width: 768px) {
     #carouselExampleIndicators {
