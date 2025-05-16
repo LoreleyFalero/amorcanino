@@ -1,3 +1,4 @@
+/* Reset y base */
 * {
   margin: 0;
   padding: 0;
@@ -7,33 +8,46 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: rgb(214, 214, 214) !important;
-  font-family: "Arial", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   width: 100%;
 }
 
+/* Main */
+main {
+  flex-grow: 1;
+}
+
+/* Navegación */
 nav {
   display: flex;
-  font-family: "Arial", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   align-items: center;
   justify-content: space-between;
   text-transform: uppercase;
   letter-spacing: 5px;
   word-spacing: 90px;
+  text-decoration: none;
   font-size: 20px;
   width: 100%;
   padding: 15px 20px;
   background: #FFACF0;
 }
+
 nav .logo img {
   display: block;
   height: 100px;
 }
+
 nav .menu {
   display: flex;
   justify-content: center;
@@ -41,39 +55,50 @@ nav .menu {
   gap: 80px;
   width: 100%;
 }
+
 nav .menu a {
-  color: rgb(0, 0, 0);
+  color: black;
   text-decoration: none;
   font-size: 25px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.tituloprincipalinicio {
-  color: rgb(0, 0, 0);
-  font-size: 35px;
+/* Titulos principales */
+.tituloprincipalinicio,
+.titulo-base {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 900;
-  white-space: nowrap;
   text-align: center;
   margin-bottom: 70px;
   padding: 15px;
 }
+
+.tituloprincipalinicio {
+  color: black;
+  font-size: 70px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  white-space: nowrap;
+}
+
 .tituloprincipalinicio h1 {
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeInUp 1.5s ease-out forwards;
 }
 
+/* Animación fadeInUp */
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+/* Títulos secundarios */
 .titulosecundario {
   color: rgb(0, 0, 0);
-  font-family: "Arial", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 30px;
   display: inline-block;
   width: 43%;
@@ -81,40 +106,22 @@ nav .menu a {
   margin-top: 10px;
 }
 
-li {
-  color: white;
-  text-decoration: underline;
-}
-
+/* Fondo rosa */
 .fondorosa {
-  background: #FFACF0;
-  font-family: "Arial", sans-serif;
+  background: #B14890;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   white-space: nowrap;
   display: inline-block;
   font-size: 30px;
   padding: 40px;
   margin: 50px;
+  width: auto;
   max-width: 55%;
   border-radius: 20px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  text-align: center;
-  width: 100%;
-  margin-top: 3rem;
-  padding: 1.5rem 0;
-}
-footer p {
-  color: black;
-  font-size: 14px;
-  font-family: "Arial", sans-serif;
-}
-
+/* Imagen inicio */
 .imageninicio {
   position: absolute;
   bottom: 140px;
@@ -122,259 +129,53 @@ footer p {
   overflow: hidden;
   display: inline-block;
 }
+
 .imageninicio img {
   transition: transform 0.5s ease-in-out;
   display: block;
   width: 100%;
   height: auto;
 }
-.imageninicio:hover img {
+
+.imageninicio img:hover {
   transform: scale(1.1);
 }
 
+/* Párrafos */
 p {
-  color: black;
+  color: rgb(0, 0, 0);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   width: 45%;
   padding: 20px;
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    word-spacing: normal;
-    gap: 10px;
-  }
-  .menu {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .tituloprincipalinicio {
-    font-size: 25px;
-    white-space: normal;
-  }
-  .titulosecundario {
-    width: 100%;
-    font-size: 22px;
-    text-align: center;
-    margin-top: 20px;
-  }
-  .fondorosa {
-    display: block;
-    white-space: normal;
-    width: 90%;
-    font-size: 18px;
-    padding: 20px;
-    margin: 20px auto;
-    text-align: left;
-  }
-  p {
-    width: 90%;
-    font-size: 16px;
-    padding: 10px;
-    margin: auto;
-  }
-  .imageninicio {
-    position: static;
-    text-align: center;
-    margin: 20px auto;
-  }
-  .imageninicio img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  footer {
-    flex-direction: column;
-    font-size: 14px;
-    padding: 20px;
-    margin-top: 3rem;
-    padding: 1.5rem 0;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Listas */
+li {
+  color: white;
+  text-decoration: underline;
 }
 
-nav {
-  display: flex;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  word-spacing: 90px;
-  text-decoration: none;
-  font-size: 20px;
-  width: 100%;
-  padding: 15px 20px;
-  background: #FFACF0;
-}
-nav .logo img {
-  display: block;
-  height: 100px;
-}
-nav .menu {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-  gap: 80px;
-  width: 100%;
-}
-nav .menu a {
-  color: black;
-  text-decoration: none;
-  font-size: 25px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
+/* Footer */
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   width: 100%;
   margin-top: 3rem;
   padding: 1.5rem 0;
 }
+
 footer p {
   color: black;
-  font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
-  
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
 }
 
-nav {
-  display: flex;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  word-spacing: 90px;
-  text-decoration: none;
-  font-size: 20px;
-  width: 100%;
-  padding: 15px 20px;
-  background: #FFACF0;
-}
-nav .logo img {
-  display: block;
-  height: 100px;
-}
-nav .menu {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-  gap: 80px;
-  width: 100%;
-}
-nav .menu a {
-  color: black;
-  text-decoration: none;
-  font-size: 25px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.tituloprincipalinicioservicios {
-  color: black;
-  font-size: 35px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 900;
-  white-space: nowrap;
-  text-align: center;
-  margin-bottom: 70px;
-  padding: 15px;
-}
-
-.titulosecundarioservicios {
-  color: rgb(0, 0, 0);
-  font-size: 30px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-}
-
-.contenedor {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 50px;
-  text-align: center;
-}
-
-.columna {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.serviciobasico,
-.serviciocompleto {
-  color: #000000;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 25px;
-}
-
-.lista {
-  padding: 30px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: #B14890;
-  border-radius: 10px;
-  width: 500px;
-  text-align: center;
-  padding: 60px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-.lista li {
-  color: black;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 18px;
-  padding: 6px 0;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .contenedor {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 20px;
-  }
-  .lista {
-    width: 90%;
-    padding: 30px;
-  }
-  .tituloprincipalinicioservicios {
-    font-size: 28px;
-    white-space: normal;
-  }
-  .titulosecundarioservicios {
-    font-size: 20px;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Galería */
 .galeria h1 {
   color: black;
   font-size: 70px;
@@ -388,9 +189,8 @@ nav .menu a {
 
 #carouselExampleIndicators {
   max-width: 800px;
-  margin: auto;
+  margin: 80px auto 0 auto;
   overflow: hidden;
-  margin-top: 80px;
 }
 
 .carousel-item img {
@@ -419,29 +219,15 @@ nav .menu a {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  #carouselExampleIndicators {
-    max-width: 100%;
-  }
-  .carousel-item img {
-    height: auto;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Contacto */
 .contacto {
   color: black;
-  font-size: 35px;
+  font-size: 4rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   white-space: nowrap;
   text-align: center;
   padding: 15px;
-  font-size: 4rem;
 }
 
 .informacion {
@@ -450,11 +236,10 @@ nav .menu a {
   padding: 20px;
   background-color: #B14890;
   border-radius: 8px;
-  margin-top: 50px;
+  margin: 100px auto 0 auto;
   display: inline-flex;
   flex-direction: column;
   width: 950px;
-  margin: 100px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -514,31 +299,13 @@ p {
 
 .mapa {
   width: 100%;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
   border-radius: 8px;
   overflow: hidden;
-  margin-top: 30px;
   height: 400px;
 }
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-@media (max-width: 768px) {
-  .contacto {
-    font-size: 26px;
-    white-space: normal;
-    padding: 10px;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Reservar turno */
 .reservesuturno {
   color: black;
   font-size: 35px;
@@ -576,507 +343,5 @@ textarea {
   resize: vertical;
   min-height: 100px;
   max-height: 200px;
-  font-family: sans-serif;
+  font-family: sans;
 }
-
-form h2 {
-  color: rgb(0, 0, 0);
-  text-align: center;
-  margin: 0;
-  margin-bottom: 8px;
-  font-size: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-label {
-  font-size: 15px;
-  line-height: 2;
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-a {
-  color: #000000;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-iframe {
-  display: block;
-  margin: 20px auto;
-  border: none;
-  max-width: 100%;
-  height: 300px;
-}
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-@media (max-width: 768px) {
-  .reservesuturno {
-    font-size: 26px;
-    white-space: normal;
-    padding: 10px;
-    margin-bottom: 40px;
-  }
-  form {
-    padding: 20px;
-    margin: 10px;
-    max-width: 100%;
-  }
-  .forminput {
-    padding: 10px 0;
-  }
-  input, textarea {
-    font-size: 16px;
-  }
-  form h2 {
-    font-size: 24px;
-  }
-  label {
-    font-size: 14px;
-  }
-  iframe {
-    height: 220px;
-  }
-}
-body {
-  background-color: rgb(214, 214, 214) !important;
-  font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-  width: 100%;
-}
-
-.titulo-base, .tituloprincipalinicio {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 900;
-  text-align: center;
-  margin-bottom: 70px;
-  padding: 15px;
-}
-
-.tituloprincipalinicio {
-  color: black;
-  font-size: 70px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  white-space: nowrap;
-}
-
-.titulosecundario {
-  color: rgb(0, 0, 0);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 30px;
-  display: inline-block;
-  width: 43%;
-  text-align: right;
-  margin-top: 10px;
-}
-
-.fondorosa {
-  background: #B14890;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  white-space: nowrap;
-  display: inline-block;
-  font-size: 30px;
-  padding: 40px;
-  margin: 50px;
-  width: auto;
-  max-width: 55%;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-.imageninicio {
-  position: absolute;
-  bottom: 140px;
-  left: 1260px;
-  overflow: hidden;
-  display: inline-block;
-}
-.imageninicio img {
-  transition: transform 0.5s ease-in-out;
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.imageninicio img:hover {
-  transform: scale(1.1);
-}
-
-p {
-  color: rgb(0, 0, 0);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 20px;
-  width: 45%;
-  padding: 20px;
-}
-
-.tituloprincipalinicio h1 {
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInUp 1.5s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    word-spacing: normal;
-    gap: 10px;
-  }
-  .menu {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .tituloprincipalinicio {
-    font-size: 25px;
-    white-space: normal;
-  }
-  .titulosecundario {
-    width: 100%;
-    font-size: 22px;
-    text-align: center;
-    margin-top: 20px;
-  }
-  .fondorosa {
-    display: block;
-    white-space: normal;
-    width: 90%;
-    font-size: 18px;
-    padding: 20px;
-    margin: 20px auto;
-    text-align: left;
-  }
-  p {
-    width: 90%;
-    font-size: 16px;
-    padding: 10px;
-    margin: auto;
-  }
-  .imageninicio {
-    position: static;
-    text-align: center;
-    margin: 20px auto;
-  }
-  .imageninicio img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  footer {
-    flex-direction: column;
-    font-size: 14px;
-    padding: 20px;
-    margin-top: 3rem;
-    padding: 1.5rem 0;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-.tituloprincipalinicioservicios {
-  color: black;
-  font-size: 35px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 900;
-  white-space: nowrap;
-  text-align: center;
-  margin-bottom: 70px;
-  padding: 15px;
-}
-
-.titulosecundarioservicios {
-  color: rgb(0, 0, 0);
-  font-size: 30px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-}
-
-.contenedor {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 50px;
-  text-align: center;
-}
-
-.columna {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.serviciobasico,
-.serviciocompleto {
-  color: #000000;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 25px;
-}
-
-.lista {
-  padding: 30px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: #B14890;
-  border-radius: 10px;
-  width: 500px;
-  text-align: center;
-  padding: 60px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-.lista li {
-  color: black;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 18px;
-  padding: 6px 0;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .contenedor {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 20px;
-  }
-  .lista {
-    width: 90%;
-    padding: 30px;
-  }
-  .tituloprincipalinicioservicios {
-    font-size: 28px;
-    white-space: normal;
-  }
-  .titulosecundarioservicios {
-    font-size: 20px;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.galeria h1 {
-  color: black;
-  font-size: 70px;
-  margin-top: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 900;
-  text-align: center;
-  margin-bottom: 70px;
-  padding: 15px;
-}
-
-#carouselExampleIndicators {
-  max-width: 800px;
-  margin: auto;
-  overflow: hidden;
-  margin-top: 80px;
-}
-
-.carousel-item img {
-  height: 500px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  padding: 20px;
-}
-
-.carousel-indicators button {
-  background-color: gray;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  opacity: 0.5;
-}
-
-.carousel-indicators .active {
-  background-color: white;
-  opacity: 1;
-}
-
-@media (max-width: 768px) {
-  #carouselExampleIndicators {
-    max-width: 100%;
-  }
-  .carousel-item img {
-    height: auto;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.contacto {
-  color: black;
-  font-size: 35px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 900;
-  white-space: nowrap;
-  text-align: center;
-  padding: 15px;
-}
-
-.informacion {
-  font-family: Arial, sans-serif;
-  line-height: 1;
-  padding: 20px;
-  background-color: #B14890;
-  border-radius: 8px;
-  margin-top: 50px;
-  display: inline-flex;
-  flex-direction: column;
-  width: 950px;
-  margin: 100px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-.detalle {
-  display: flex;
-  align-items: center;
-  margin-bottom: 6px;
-  white-space: nowrap;
-}
-
-.titulo {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  font-size: 35px;
-  margin-right: 6px;
-}
-
-p {
-  margin: 0;
-}
-
-.instagram-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.instagram-box {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-}
-
-.logo-instagram {
-  width: 50px;
-  height: auto;
-}
-
-.texto-instagram {
-  color: black;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.teesperamos {
-  color: black;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  white-space: nowrap;
-  margin-left: 700px;
-}
-
-.mapa {
-  width: 100%;
-  margin: 0 auto;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-top: 30px;
-  height: 400px;
-}
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-@media (max-width: 768px) {
-  .contacto {
-    font-size: 26px;
-    white-space: normal;
-    padding: 10px;
-  }
-  .informacion {
-    width: 100%;
-    margin: 30px 10px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-  .detalle {
-    flex-direction: column;
-    align-items: flex-start;
-    white-space: normal;
-    margin-bottom: 12px;
-  }
-  .titulo {
-    font-size: 18px;
-    margin-bottom: 4px;
-  }
-  .texto-instagram,
-  .teesperamos {
-    flex-direction: column;
-    text-align: center;
-    white-space: normal;
-    margin-left: 0;
-    font-size: 16px;
-  }
-  .instagram-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .instagram-box {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  .logo-instagram {
-    width: 40px;
-  }
-  .mapa {
-    height: 250px;
-    margin: 20px 10px;
-  }
-}
-
-/*# sourceMappingURL=estilos.css.map */
