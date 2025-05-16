@@ -47,21 +47,18 @@ body {
     margin-top: 10px;
 }
 
-// Fondo rosa
 .fondorosa {
     background: $color-fondo-rosa;
     font-family: $fuente-principal;
-    white-space: nowrap;
-    display: inline-block;
+    white-space: normal;
+    display: block;
     font-size: 30px;
     padding: 40px;
-    margin: 50px;
+    margin: 50px auto 2rem auto;
     width: auto;
     max-width: 55%;
     border-radius: 20px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    display: block;
-    white-space: normal;
 }
 
 // Estilo de la imagen
