@@ -27,3 +27,17 @@ width: 45%;
 padding: 20px;
 margin: 0;
 }
+
+html, body {
+height: 100%;
+}
+
+body {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+main {
+flex: 1;
+}
