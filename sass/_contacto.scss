@@ -1,12 +1,18 @@
 @use 'variables';
 
-.contacto-seccion {
-background-color: variables.$color-fondo-rosa;
-max-width: 900px;
-margin: 40px auto;
-padding: 30px;
-border-radius: 20px;
+@media (min-width: variables.$mobile-min) and (max-width: variables.$mobile-max) {
+.contacto {
+    font-size: variables.$tamano-subtitulo-md;
+    white-space: normal;
+    padding: 10px;
+}
 
+section {
+background-color: variables.$color-fondo-rosa;
+padding: 30px;
+border-radius: 15px;
+max-width: 900px;
+margin: 40px auto; // centrado horizontal con margen arriba/abajo
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -18,8 +24,8 @@ gap: 25px;
     text-align: center;
     margin-bottom: 10px;
 
-    .detalle {
-    margin-bottom: 12px;
+.detalle {
+margin-bottom: 10px;
 
     .titulo {
         font-weight: bold;
@@ -29,32 +35,29 @@ gap: 25px;
     }
 }
 
-.whatsapp-btn {
-    max-width: 200px;
-    width: 100%;
-    padding: 12px 25px;
-    font-size: variables.$tamano-texto-md;
-    border-radius: 10px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-    background-color: color.scale(#198754, $lightness: -10%);
-    }
-}
-
 .mapa {
     width: 100%;
     max-width: 700px;
-    border-radius: 15px;
-    overflow: hidden;
-    margin: 15px 0;
 
     iframe {
     width: 100% !important;
     height: 400px !important;
     border: none;
     border-radius: 10px;
+    }
+}
+
+a.btn.btn-success {
+    padding: 12px 30px;
+    font-size: variables.$tamano-texto-md;
+    border-radius: 10px;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+    background-color: darken(#198754, 10%);
     }
 }
 
@@ -66,7 +69,7 @@ gap: 25px;
     margin-top: 15px;
 
     .instagram-box {
-     display: flex;
+    display: flex;
     align-items: center;
     gap: 10px;
 
@@ -79,46 +82,38 @@ gap: 25px;
 .teesperamos {
     font-size: variables.$tamano-texto-sm;
     margin-top: 20px;
-    text-align: center;
 }
 }
 
-/* Estilos para móviles */
-@media (max-width: variables.$mobile-max) {
-.contacto-seccion {
-    max-width: 95%;
-    padding: 20px;
+.informacion {
+    margin: 20px 0;
+    padding: 10px;
+}
 
-    .informacion {
-    max-width: 100%;
-    margin-bottom: 15px;
-    }
+.mapa {
+    height: variables.$mapa-height-mobile;
+    margin: 15px 0;
+}
 
-    .whatsapp-btn {
+a.btn.btn-success {
     max-width: 100%;
     font-size: variables.$tamano-texto-sm;
-    }
+}
 
-    .mapa iframe {
-    height: variables.$mapa-height-mobile !important;
-    }
-
-    .instagram-container {
+.instagram-container {
     flex-direction: column;
-
     .instagram-box {
-        flex-direction: column;
-        gap: 8px;
+    flex-direction: column;
+    gap: 8px;
 
-        .logo-instagram {
+    .logo-instagram {
         width: 35px;
-        }
     }
     }
+}
 
-    .teesperamos {
+.teesperamos {
     font-size: variables.$tamano-texto-xs;
-    }
 }
 }
 
