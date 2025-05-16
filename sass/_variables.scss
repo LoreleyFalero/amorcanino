@@ -8,11 +8,11 @@ $fuente-titulos: Verdana, Geneva, Tahoma, sans-serif;
 // Colores
 $color-fondo: #f0f0f0;
 $color-principal: #B14890;
-$color-secundario: #FFACF0;
-$color-rosa: #F8B8D1;
+$color-rosa: #FFACF0;
 $color-texto: black;
 $color-footer: black;
 $color-titulo: black;
+$color-fondo-rosa: #B14890;
 
 // Tamaños tipográficos (en rem)
 $tamano-titulo-xl: 2rem;        // 32px
@@ -38,3 +38,7 @@ $espaciado-grande: 24px;
 
 // Otros
 $sombra-general: 0 0 35px #0006;
+
+// Tamaños para mapa
+$mapa-height: 400px;
+$mapa-height-mobile: 250px;

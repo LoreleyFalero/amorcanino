@@ -1,11 +1,21 @@
-// Mixin para sombra
-@mixin sombra($x: 0, $y: 8px, $blur: 24px, $color: rgba(0, 0, 0, 0.4)) {
-    box-shadow: $x $y $blur $color;
+// _mixins.scss
+@use 'variables' as *;
+
+@mixin titulo-base($size: $font-size-title) {
+  font-family: $fuente-principal;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 70px;
+  padding: 15px;
+  font-size: $size;
 }
 
-  // Mixin para texto transformado
-@mixin texto-transformado($tamano: $fuente-grande, $espaciado: $espaciado) {
-    font-size: $tamano;
-    text-transform: uppercase;
-    letter-spacing: $espaciado;
+@mixin sombra($x: 0, $y: 8px, $blur: 24px, $color: rgba(0, 0, 0, 0.4)) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin texto-transformado($tamano: $font-size-title, $espaciado: 2px) {
+  font-size: $tamano;
+  text-transform: uppercase;
+  letter-spacing: $espaciado;
 }
