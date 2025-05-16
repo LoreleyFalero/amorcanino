@@ -1,83 +1,8 @@
 @use 'variables';
-@use 'mixin';
 
+@media (min-width: variables.$mobile-min) and (max-width: variables.$mobile-max) {
 .contacto {
-@include mixin.titulo-base($size: variables.$tamano-titulo-lg);
-margin-top: 10px;
-color: variables.$color-texto; 
-font-family: variables.$fuente-titulos; 
-}
-
-.informacion {
-font-family: variables.$fuente-general;
-line-height: 1.3;
-padding: 20px;
-background-color: variables.$color-principal;
-border-radius: 8px;
-max-width: 950px;
-width: 950px;
-margin: 100px auto;
-@include mixin.sombra; 
-display: flex;
-flex-direction: column;
-}
-
-.detalle {
-display: flex;
-align-items: center;
-margin-bottom: 6px;
-white-space: nowrap;
-}
-
-.titulo {
-font-family: variables.$fuente-titulos;
-font-weight: bold;
-font-size: variables.$tamano-texto-lg; 
-margin-right: 6px;
-}
-
-.instagram-container {
-display: flex;
-justify-content: center;
-margin: 20px 0;
-}
-
-.instagram-box {
-display: flex;
-align-items: center;
-font-size: variables.$tamano-texto-sm;
-}
-
-.logo-instagram {
-width: 50px;
-height: auto;
-}
-
-.texto-instagram,
-.teesperamos {
-color: variables.$color-texto;
-font-family: variables.$fuente-secundaria;
-display: flex;
-text-align: center;
-align-items: center;
-white-space: nowrap;
-}
-
-.teesperamos {
-margin-left: auto;
-}
-
-.mapa {
-width: 100%;
-height: variables.$mapa-height;
-border-radius: 8px;
-overflow: hidden;
-margin: 30px auto 50px auto;
-}
-
-@media (max-width: 768px) {
-.contacto {
-    font-size: variables.$tamano-subtitulo-md; 
+    font-size: variables.$tamano-subtitulo-md;
     white-space: normal;
     padding: 10px;
 }
@@ -97,7 +22,7 @@ margin: 30px auto 50px auto;
 }
 
 .titulo {
-    font-size: variables.$tamano-texto-sm; 
+    font-size: variables.$tamano-texto-sm;
     margin-bottom: 4px;
 }
 
@@ -129,4 +54,10 @@ margin: 30px auto 50px auto;
     height: variables.$mapa-height-mobile;
     margin: 20px 10px;
 }
+}
+
+@media (min-width: variables.$tablet-min) and (max-width: variables.$tablet-max) {
+}
+
+@media (min-width: variables.$desktop-min) {
 }

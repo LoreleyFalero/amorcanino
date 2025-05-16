@@ -42,3 +42,12 @@ $sombra-general: 0 0 35px #0006;
 // Tamaños para mapa
 $mapa-height: 400px;
 $mapa-height-mobile: 250px;
+
+// Breakpoints - MEDIA QUERIES
+$mobile-min: 320px;
+$mobile-max: 599px;
+
+$tablet-min: 600px;
+$tablet-max: 1024px;
+
+$desktop-min: 1025px;

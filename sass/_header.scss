@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 body {
 background-color: $color-fondo !important;
@@ -8,18 +9,16 @@ width: 100%;
 }
 
 nav {
-display: flex;
-font-family: $fuente-general; // Reemplazado $fuente-secundaria
+@include flex-center(row, space-between, center, 1.25rem);
+font-family: $fuente-general;
 text-align: center;
-align-items: center;
-justify-content: space-between; 
 text-transform: uppercase;
 letter-spacing: 5px;
 word-spacing: 90px;
 font-size: 20px;
 width: 100%;
 padding: 15px 20px;
-background: $color-rosa; // Reemplazado $color-secundario
+background: $color-rosa;
 
 .logo img {
     display: block;
@@ -27,14 +26,12 @@ background: $color-rosa; // Reemplazado $color-secundario
 }
 
 .menu {
-    display: flex;
-    justify-content: center;
+    @include flex-center(row, center, center, 5rem); // gap: 80px = 5rem
     flex-grow: 1;
-    gap: 80px;
     width: 100%;
 
     a {
-      color: $color-titulo; // Reemplazado $color-texto
+    color: $color-titulo;
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
@@ -44,14 +41,11 @@ background: $color-rosa; // Reemplazado $color-secundario
 }
 
 .tituloprincipalinicio {
-color: $color-titulo; // Reemplazado $color-texto
-font-size: 35px; // Reemplazado $tamanio-titulo
-font-family: $fuente-principal; // Reemplazado $fuente-titulos
+@include titulo-base(2.1875rem); // 35px
+color: $color-titulo;
+font-family: $fuente-general;
 font-weight: 900;
 white-space: nowrap;
-text-align: center;
-margin-bottom: 70px;
-padding: 15px;
 
 h1 {
     opacity: 0;
@@ -68,8 +62,8 @@ to {
 }
 
 .titulosecundario {
-color: $color-titulo; // Reemplazado $color-texto
-font-family: $fuente-general; // Reemplazado $fuente-secundaria
+color: $color-titulo;
+font-family: $fuente-general;
 font-size: 30px;
 display: inline-block;
 width: 43%;
@@ -83,14 +77,39 @@ text-decoration: underline;
 }
 
 .fondorosa {
-background: $color-rosa; // Reemplazado $color-principal
-font-family: $fuente-general; // Reemplazado $fuente-secundaria
+@include contenedor(55%, 40px, 50px, left);
+background: $color-rosa;
+font-family: $fuente-general;
 white-space: nowrap;
-display: inline-block;
 font-size: 30px;
-padding: 40px;
-margin: 50px;
-max-width: 55%;
 border-radius: 20px;
-box-shadow: 0px 0px 15px rgba(0,0,0,0.2); // Reemplazado $sombra-general
+@include sombra(0, 0, 15px, rgba(0, 0, 0, 0.2));
+}
+
+@mixin flex-center($direction: row, $justify: center, $align: center, $gap: 1rem) {
+display: flex;
+flex-direction: $direction;
+justify-content: $justify;
+align-items: $align;
+gap: $gap;
+}
+
+@mixin contenedor($ancho: 90%, $padding: 20px, $margin: 20px auto, $text-align: left) {
+width: $ancho;
+padding: $padding;
+margin: $margin;
+text-align: $text-align;
+}
+
+@mixin titulo-base($size: 2rem) {
+font-family: $fuente-principal;
+font-weight: 900;
+text-align: center;
+margin-bottom: 70px;
+padding: 15px;
+font-size: $size;
+}
+
+@mixin sombra($x: 0, $y: 8px, $blur: 24px, $color: rgba(0, 0, 0, 0.4)) {
+box-shadow: $x $y $blur $color;
 }

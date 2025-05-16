@@ -1,8 +1,7 @@
-// _mixins.scss
 @use 'variables' as *;
 
-@mixin titulo-base($size: $font-size-title) {
-  font-family: $fuente-principal;
+@mixin titulo-base($size: $tamano-titulo-lg) {
+  font-family: $fuente-titulos;
   font-weight: 900;
   text-align: center;
   margin-bottom: 70px;
@@ -14,7 +13,7 @@
   box-shadow: $x $y $blur $color;
 }
 
-@mixin texto-transformado($tamano: $font-size-title, $espaciado: 2px) {
+@mixin texto-transformado($tamano: $tamano-texto-md, $espaciado: 2px) {
   font-size: $tamano;
   text-transform: uppercase;
   letter-spacing: $espaciado;

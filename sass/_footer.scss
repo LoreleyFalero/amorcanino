@@ -3,13 +3,21 @@
 footer {
 display: flex;
 flex-direction: column;
-align-items: center;
 justify-content: center;
-font-size: $tamano-texto-sm; 
-text-align: center;
+align-items: center;
+
 width: 100%;
 margin-top: 3rem;
 padding: 1.5rem 0;
-color: $color-footer;
+
+text-align: center;
+font-size: $tamano-texto-sm;
 font-family: $fuente-general;
+color: $color-footer;
+
+p {
+    font-size: $tamano-texto-xs;
+    color: $color-texto;
+    margin-top: 0.5rem;
+}
 }

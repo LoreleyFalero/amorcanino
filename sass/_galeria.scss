@@ -1,60 +1,62 @@
-// _variables.scss
-$primary-color: gray;
-$active-indicator-color: white;
-$button-bg-color: rgba(0, 0, 0, 0.5);
-$font-family-main: Verdana, Geneva, Tahoma, sans-serif;
-$font-size-title: 70px;
-$carousel-height: 500px;
-$carousel-max-width: 800px;
+@use 'variables' as *;
 
-// _reset.scss
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-// _galeria.scss
-.galeria h1 {
+.galeria {
+h1 {
     color: black;
     font-size: $font-size-title;
-    margin-top: 10px;
+    margin-top: 0.625rem; // 10px
     font-family: $font-family-main;
     font-weight: 900;
     text-align: center;
-    margin-bottom: 70px;
-    padding: 15px;
+    margin-bottom: 4.375rem; // 70px
+    padding: 0.9375rem; // 15px
 }
 
 #carouselExampleIndicators {
     max-width: $carousel-max-width;
     margin: auto;
     overflow: hidden;
-    margin-top: 80px;
-}
+    margin-top: 5rem; // 80px
 
-.carousel-item img {
-    height: $carousel-height;
-    object-fit: cover;
-    border-radius: 10px;
-}
+    .carousel-item {
+    img {
+        height: $carousel-height;
+        object-fit: cover;
+        border-radius: 0.625rem; // 10px
+        width: 100%;
+    }
+    }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
     background-color: $button-bg-color;
     border-radius: 50%;
-    padding: 20px;
+      padding: 1.25rem; // 20px
+    }
+
+    .carousel-indicators {
+    button {
+        background-color: $primary-color;
+        width: 0.75rem; // 12px
+        height: 0.75rem;
+        border-radius: 50%;
+        opacity: 0.5;
+    }
+
+    .active {
+        background-color: $active-indicator-color;
+        opacity: 1;
+    }
+    }
+}
 }
 
-.carousel-indicators button {
-    background-color: $primary-color;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    opacity: 0.5;
+@media (max-width: 768px) {
+#carouselExampleIndicators {
+    max-width: 100%;
+    
+    .carousel-item img {
+    height: 20rem; 
+    }
 }
-
-.carousel-indicators .active {
-    background-color: $active-indicator-color;
-    opacity: 1;
 }
