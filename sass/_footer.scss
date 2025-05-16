@@ -1,15 +1,15 @@
 @use 'variables' as *;
 
-// _footer.scss
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: $tamanio-texto;
-    text-align: center; 
-    width: 100%;
-    margin-top: 2rem;
-    color: $color-footer;
-    font-size: $tamanio-texto-chico;
-    font-family: $fuente-general;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: $font-size-text;
+text-align: center;
+width: 100%;
+margin-top: 3rem;
+padding: 1.5rem 0;
+color: $color-footer;
+font-family: $fuente-general;
 }
