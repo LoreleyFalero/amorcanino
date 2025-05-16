@@ -1,13 +1,13 @@
 // Fuentes
-$font-family-general: 'Arial', sans-serif;
-$font-family-secundaria: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$font-family-main: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$font-family-alt: Arial, Helvetica, sans-serif;
 $font-family-titulos: Verdana, Geneva, Tahoma, sans-serif;
 $font-family-contacto-alt: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-// Colores globales
-$color-fondo: #f0f0f0;
+// Colores
 $primary-color: #B14890;
 $secondary-color: #FFACF0;
+$color-fondo: #f0f0f0;
 $color-texto: black;
 $color-footer: black;
 $color-titulo: black;
@@ -25,7 +25,7 @@ $tamano-texto-md: 1.125rem;     // 18px
 $tamano-texto-sm: 1rem;         // 16px
 $tamano-texto-xs: 0.875rem;     // 14px
 
-// Anchos (en porcentaje)
+// Anchos (porcentaje)
 $ancho-mobile: 90%;
 $ancho-tablet: 80%;
 $ancho-desktop: 70%;
@@ -38,25 +38,28 @@ $espaciado-grande: 24px;
 // Sombra general
 $sombra-general: 0 0 35px #0006;
 
-// Tamaños para mapa
+// Tamaños mapa
 $mapa-height: 400px;
 $mapa-height-mobile: 250px;
 
-// Breakpoints - MEDIA QUERIES
+// Breakpoints
 $mobile-min: 320px;
 $mobile-max: 599px;
 $tablet-min: 600px;
 $tablet-max: 1024px;
 $desktop-min: 1025px;
 
+// Otros globales
+$button-padding: 15px;
 
-// --------------------------------------------------
-// Variables específicas por sección
+// --------------------
+// VARIABLES ESPECÍFICAS POR SECCIÓN
+// --------------------
 
 // Servicios
 $service-primary-color: $primary-color;
-$service-font-family-main: $font-family-secundaria;
-$service-font-family-alt: $font-family-general;
+$service-font-family-main: $font-family-main;
+$service-font-family-alt: $font-family-alt;
 $service-font-size-title: 25px;
 $service-font-size-list: 18px;
 
@@ -71,13 +74,21 @@ $gallery-carousel-max-width: 800px;
 
 // Contacto
 $contact-primary-color: $primary-color;
-$contact-btn-success-bg-color: #28a745;  // Botón WhatsApp
+$contact-btn-success-bg-color: #28a745; // botón WhatsApp
 $contact-font-family-main: $font-family-titulos;
 $contact-font-family-alt: $font-family-contacto-alt;
 $contact-font-size-title: 35px;
 $contact-font-size-info: 20px;
 $contact-font-size-text: 16px;
-$contact-button-padding: 15px;
+$contact-button-padding: $button-padding;
 $contact-mapa-height: $mapa-height;
 $contact-mapa-height-mobile: $mapa-height-mobile;
 $contact-font-weight-bold: 900;
+
+// Formularios y elementos generales 
+$form-padding: 30px;
+$form-box-shadow: 0 0 35px #0006;
+$form-border-radius: 8px;
+$iframe-height: 300px;
+$iframe-height-mobile: 220px;
+$heading-margin-bottom: 70px;
