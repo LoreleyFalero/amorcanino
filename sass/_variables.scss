@@ -1,18 +1,17 @@
-// _variables.scss
-
 // Fuentes
-$fuente-general: 'Arial', sans-serif;
-$fuente-secundaria: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-$fuente-titulos: Verdana, Geneva, Tahoma, sans-serif;
+$font-family-general: 'Arial', sans-serif;
+$font-family-secundaria: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$font-family-titulos: Verdana, Geneva, Tahoma, sans-serif;
+$font-family-contacto-alt: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-// Colores
+// Colores globales
 $color-fondo: #f0f0f0;
-$color-principal: #B14890;
-$color-rosa: #FFACF0;
+$primary-color: #B14890;
+$secondary-color: #FFACF0;
 $color-texto: black;
 $color-footer: black;
 $color-titulo: black;
-$color-fondo-rosa: #B14890;
+$color-fondo-rosa: $primary-color;
 
 // Tamaños tipográficos (en rem)
 $tamano-titulo-xl: 2rem;        // 32px
@@ -36,7 +35,7 @@ $espaciado-pequeno: 8px;
 $espaciado-mediano: 16px;
 $espaciado-grande: 24px;
 
-// Otros
+// Sombra general
 $sombra-general: 0 0 35px #0006;
 
 // Tamaños para mapa
@@ -46,8 +45,39 @@ $mapa-height-mobile: 250px;
 // Breakpoints - MEDIA QUERIES
 $mobile-min: 320px;
 $mobile-max: 599px;
-
 $tablet-min: 600px;
 $tablet-max: 1024px;
-
 $desktop-min: 1025px;
+
+
+// --------------------------------------------------
+// Variables específicas por sección
+
+// Servicios
+$service-primary-color: $primary-color;
+$service-font-family-main: $font-family-secundaria;
+$service-font-family-alt: $font-family-general;
+$service-font-size-title: 25px;
+$service-font-size-list: 18px;
+
+// Galería
+$gallery-primary-color: gray;
+$gallery-active-indicator-color: white;
+$gallery-button-bg-color: rgba(0, 0, 0, 0.5);
+$gallery-font-family-main: $font-family-titulos;
+$gallery-font-size-title: 70px;
+$gallery-carousel-height: 500px;
+$gallery-carousel-max-width: 800px;
+
+// Contacto
+$contact-primary-color: $primary-color;
+$contact-btn-success-bg-color: #28a745;  // Botón WhatsApp
+$contact-font-family-main: $font-family-titulos;
+$contact-font-family-alt: $font-family-contacto-alt;
+$contact-font-size-title: 35px;
+$contact-font-size-info: 20px;
+$contact-font-size-text: 16px;
+$contact-button-padding: 15px;
+$contact-mapa-height: $mapa-height;
+$contact-mapa-height-mobile: $mapa-height-mobile;
+$contact-font-weight-bold: 900;
