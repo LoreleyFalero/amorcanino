@@ -3,12 +3,12 @@
 @use 'header';
 @use 'footer';
 @use 'components';
-@use 'responsive';
 @use 'index';
 @use 'servicios';
 @use 'galeria';
 @use 'contacto';
 @use 'agenda';
+@use 'responsive';
 
 @mixin titulo-base {
 font-family: $fuente-principal;
