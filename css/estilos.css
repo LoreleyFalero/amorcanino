@@ -433,4 +433,61 @@ textarea {
   max-height: 200px;
   font-family: sans;
 }
+
+@media (max-width: 768px) {
+  /* Ajustar título principal para que no se salga */
+  .tituloprincipalinicio {
+    font-size: 32px;       
+    white-space: normal;    
+    padding: 10px;
+  }
+
+  /* Ajustar fondo rosa para que sea más ancho y centrado */
+  .fondorosa {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    white-space: normal;
+  }
+
+  p {
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto 1rem;
+  }
+
+  /* Imagen inicio */
+  .imageninicio {
+    position: static;       
+    margin: 20px auto;
+    max-width: 90%;
+    display: block;
+  }
+
+  /* Título secundario */
+  .titulosecundario {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  /* Ajusta menú para que no se rompa */
+  nav .menu {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  /* Ajusta tamaño de texto para móviles */
+  nav {
+    font-size: 16px;
+    word-spacing: normal;
+  }
+
+  nav .menu a {
+    font-size: 18px;
+  }
+}
 /*# sourceMappingURL=estilos.css.map */
