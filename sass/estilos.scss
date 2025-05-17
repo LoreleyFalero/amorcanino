@@ -53,27 +53,28 @@ font-family: $fuente-principal;
 font-size: 30px;
 padding: 40px;
 margin: 50px auto 2rem;
-max-width: 55%;
+max-width: 100%;
 border-radius: 20px;
 @include sombra;
 }
 
 .imageninicio {
-position: absolute;
-bottom: 140px;
-left: 1260px;
-overflow: hidden;
-display: inline-block;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 40px;
+margin-bottom: 40px;
 
 img {
-    transition: transform 0.5s ease-in-out;
-    display: block;
-    width: 100%;
-    height: auto;
+width: 100%;
+max-width: 500px;
+height: auto;
+display: block;
+transition: transform 0.5s ease-in-out;
 
-    &:hover {
-    transform: scale(1.1);
-    }
+&:hover {
+transform: scale(1.1);
+}
 }
 }
 
