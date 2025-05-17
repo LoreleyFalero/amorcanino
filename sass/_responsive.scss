@@ -1,3 +1,6 @@
+// _responsive.scss
+
+// Estilos para móviles
 @media (min-width: $mobile-min) and (max-width: $mobile-max) {
   nav {
     display: flex;
@@ -5,32 +8,32 @@
     align-items: center;
     text-align: center;
     gap: 10px;
-    font-size: 1rem; // 16px en rem
+    font-size: 1rem;
     width: 100%;
   }
 
   .menu {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
   }
 
   .tituloprincipalinicio {
-    font-size: 1.5625rem; // 25px en rem
+    font-size: 1.5625rem;
     white-space: normal;
   }
 
   .titulosecundario {
     width: 100%;
-    font-size: 1.375rem; // 22px en rem
+    font-size: 1.375rem;
     text-align: center;
     margin-top: 20px;
   }
 
   .fondorosa {
     width: 90%;
-    font-size: 1.125rem; // 18px en rem
+    font-size: 1.125rem;
     padding: 20px;
     margin: 20px auto;
     text-align: left;
@@ -38,7 +41,7 @@
 
   p {
     width: 90%;
-    font-size: 1rem; // 16px en rem
+    font-size: 1rem;
     padding: 10px;
     margin: auto;
   }
@@ -59,17 +62,18 @@
 
   footer {
     flex-direction: column;
-    font-size: 0.875rem; // 14px en rem
+    font-size: 0.875rem;
     padding: 20px;
   }
 }
 
+// Estilos para tablets
 @media (min-width: $tablet-min) and (max-width: $tablet-max) {
   nav {
     flex-direction: row;
     justify-content: center;
     gap: 15px;
-    font-size: 1.125rem; // 18px en rem
+    font-size: 1.125rem;
   }
 
   .menu {
@@ -78,24 +82,24 @@
   }
 
   .tituloprincipalinicio {
-    font-size: 1.75rem; // 28px en rem
+    font-size: 1.75rem;
   }
 
   .titulosecundario {
-    font-size: 1.5rem; // 24px en rem
+    font-size: 1.5rem;
     margin-top: 15px;
   }
 
   .fondorosa {
     width: 80%;
-    font-size: 1.25rem; // 20px en rem
+    font-size: 1.25rem;
     padding: 25px;
     margin: 25px auto;
   }
 
   p {
     width: 80%;
-    font-size: 1.125rem; // 18px en rem
+    font-size: 1.125rem;
     padding: 15px;
   }
 
@@ -105,17 +109,18 @@
   }
 
   footer {
-    font-size: 1rem; // 16px en rem
+    font-size: 1rem;
     padding: 25px;
   }
 }
 
+// Estilos para desktop
 @media (min-width: $desktop-min) {
   nav {
     flex-direction: row;
     justify-content: space-between;
     gap: 20px;
-    font-size: 1.25rem; // 20px en rem
+    font-size: 1.25rem;
   }
 
   .menu {
@@ -124,24 +129,24 @@
   }
 
   .tituloprincipalinicio {
-    font-size: 2rem; // 32px en rem
+    font-size: 2rem;
   }
 
   .titulosecundario {
-    font-size: 1.75rem; // 28px en rem
+    font-size: 1.75rem;
     margin-top: 20px;
   }
 
   .fondorosa {
     width: 70%;
-    font-size: 1.5rem; // 24px en rem
+    font-size: 1.5rem;
     padding: 30px;
     margin: 30px auto;
   }
 
   p {
     width: 70%;
-    font-size: 1.25rem; // 20px en rem
+    font-size: 1.25rem;
     padding: 20px;
   }
 
@@ -151,7 +156,7 @@
   }
 
   footer {
-    font-size: 1.125rem; // 18px en rem
+    font-size: 1.125rem;
     padding: 30px;
   }
 }

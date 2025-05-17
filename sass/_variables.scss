@@ -43,10 +43,12 @@ $mapa-height: 400px;
 $mapa-height-mobile: 250px;
 
 // Media Queries
-$mobile-min: 320px;
-$mobile-max: 599px;
-$tablet-min: 600px;
+$mobile-min: 0px;
+$mobile-max: 600px;
+
+$tablet-min: 601px;
 $tablet-max: 1024px;
+
 $desktop-min: 1025px;
 
 // Otros globales
