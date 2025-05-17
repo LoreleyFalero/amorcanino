@@ -6,11 +6,14 @@
     text-align: center;
     gap: 10px;
     font-size: 1rem; // 16px en rem
+    width: 100%;
   }
 
   .menu {
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
   }
 
   .tituloprincipalinicio {
