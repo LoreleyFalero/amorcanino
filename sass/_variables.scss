@@ -30,19 +30,19 @@ $ancho-mobile: 90%;
 $ancho-tablet: 80%;
 $ancho-desktop: 70%;
 
-// Espaciados (en px)
+// Espaciados
 $espaciado-pequeno: 8px;
 $espaciado-mediano: 16px;
 $espaciado-grande: 24px;
 
 // Sombra general
-$sombra-general: 0 0 35px rgba(0, 0, 0, 0.4);
+$sombra-general: 0 0 35px #0006;
 
 // Tamaños mapa
 $mapa-height: 400px;
 $mapa-height-mobile: 250px;
 
-// Breakpoints
+// Media Queries
 $mobile-min: 320px;
 $mobile-max: 599px;
 $tablet-min: 600px;
@@ -52,7 +52,10 @@ $desktop-min: 1025px;
 // Otros globales
 $button-padding: 15px;
 
-// Variables específicas por sección
+// --------------------
+// VARIABLES ESPECÍFICAS POR SECCIÓN
+// --------------------
+
 // Servicios
 $service-primary-color: $primary-color;
 $service-font-family-main: $font-family-main;
@@ -71,7 +74,7 @@ $gallery-carousel-max-width: 800px;
 
 // Contacto
 $contact-primary-color: $primary-color;
-$contact-btn-success-bg-color: #28a745;
+$contact-btn-success-bg-color: #28a745; // botón WhatsApp
 $contact-font-family-main: $font-family-titulos;
 $contact-font-family-alt: $font-family-contacto-alt;
 $contact-font-size-title: 35px;
@@ -82,9 +85,9 @@ $contact-mapa-height: $mapa-height;
 $contact-mapa-height-mobile: $mapa-height-mobile;
 $contact-font-weight-bold: 900;
 
-// Formularios y elementos generales
+// Formularios y elementos generales 
 $form-padding: 30px;
-$form-box-shadow: 0 0 35px rgba(0, 0, 0, 0.4);
+$form-box-shadow: 0 0 35px #0006;
 $form-border-radius: 8px;
 $iframe-height: 300px;
 $iframe-height-mobile: 220px;
