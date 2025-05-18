@@ -1,6 +1,7 @@
+@use 'variables' as *;
 nav {
     display: flex;
-    font-family: $fuente-principal;
+    font-family: $font-family-main;
     text-align: center;
     align-items: center;
     justify-content: space-between;
@@ -11,7 +12,7 @@ nav {
     font-size: 20px;
     width: 100%;
     padding: 15px 20px;
-    background: $color-rosa;
+    background: $primary-color; // corregido
 
     .logo img {
         display: block;
@@ -38,7 +39,7 @@ nav {
 // _servicios.scss
 .tituloprincipalinicioservicios {
     color: black;
-    font-size: $font-size-title;
+    font-size: $service-font-size-title;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 900;
     white-space: nowrap;
@@ -49,7 +50,7 @@ nav {
 
 .titulosecundarioservicios {
     color: rgb(0, 0, 0);
-    font-size: $font-size-subtitle;
+    font-size: $tamano-subtitulo-md;  // ejemplo de tamaño que definiste
     font-family: $font-family-main;
     display: inline-block;
     width: 100%;
@@ -74,26 +75,25 @@ nav {
 .serviciocompleto {
     color: #000000;
     font-family: $font-family-alt;
-    font-size: $font-size-service-title;
+    font-size: $service-font-size-list;
     font-weight: 600;
     margin-bottom: 25px;
 }
 
 .lista {
-    padding: 30px;
+    padding: 60px;
     font-family: $font-family-main;
     background-color: $primary-color;
     border-radius: 10px;
     width: 500px;
     text-align: center;
-    padding: 60px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .lista li {
     color: black;
     font-family: $font-family-main;
-    font-size: $font-size-list;
+    font-size: $service-font-size-list;
     padding: 6px 0;
     text-decoration: none;
 }

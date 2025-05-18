@@ -3,14 +3,15 @@
 
 body {
 background-color: $color-fondo !important;
-font-family: $fuente-general;
+font-family: $font-family-main;
 min-height: 100vh;
 width: 100%;
 }
 
 nav {
 @include flex-center(row, space-between, center, 1.25rem);
-font-family: $fuente-general;
+background-color: $secondary-color !important;
+font-family: $font-family-main;
 text-align: center;
 text-transform: uppercase;
 letter-spacing: 5px;
@@ -18,7 +19,6 @@ word-spacing: 90px;
 font-size: 20px;
 width: 100%;
 padding: 15px 20px;
-background: $color-rosa;
 
 .logo img {
     display: block;
@@ -26,7 +26,7 @@ background: $color-rosa;
 }
 
 .menu {
-    @include flex-center(row, center, center, 5rem); // gap: 80px = 5rem
+    @include flex-center(row, center, center, 5rem);
     flex-grow: 1;
     width: 100%;
 
@@ -41,9 +41,9 @@ background: $color-rosa;
 }
 
 .tituloprincipalinicio {
-@include titulo-base(2.1875rem); // 35px
+@include titulo-base(2.1875rem);
 color: $color-titulo;
-font-family: $fuente-general;
+font-family: $font-family-main;
 font-weight: 900;
 white-space: nowrap;
 
@@ -63,7 +63,7 @@ to {
 
 .titulosecundario {
 color: $color-titulo;
-font-family: $fuente-general;
+font-family: $font-family-main;
 font-size: 30px;
 display: inline-block;
 width: 43%;
@@ -78,38 +78,10 @@ text-decoration: underline;
 
 .fondorosa {
 @include contenedor(55%, 40px, 50px, left);
-background: $color-rosa;
-font-family: $fuente-general;
+background: $color-fondo-rosa;
+font-family: $font-family-main;
 white-space: nowrap;
 font-size: 30px;
 border-radius: 20px;
 @include sombra(0, 0, 15px, rgba(0, 0, 0, 0.2));
-}
-
-@mixin flex-center($direction: row, $justify: center, $align: center, $gap: 1rem) {
-display: flex;
-flex-direction: $direction;
-justify-content: $justify;
-align-items: $align;
-gap: $gap;
-}
-
-@mixin contenedor($ancho: 90%, $padding: 20px, $margin: 20px auto, $text-align: left) {
-width: $ancho;
-padding: $padding;
-margin: $margin;
-text-align: $text-align;
-}
-
-@mixin titulo-base($size: 2rem) {
-font-family: $fuente-principal;
-font-weight: 900;
-text-align: center;
-margin-bottom: 70px;
-padding: 15px;
-font-size: $size;
-}
-
-@mixin sombra($x: 0, $y: 8px, $blur: 24px, $color: rgba(0, 0, 0, 0.4)) {
-box-shadow: $x $y $blur $color;
 }

@@ -4,12 +4,13 @@ nav {
 display: flex;
 align-items: center;
 justify-content: space-between;
-font-family: $fuente-titulos;
+font-family: $font-family-titulos;
 text-transform: uppercase;
 letter-spacing: 5px;
 width: 100%;
+min-height: 100px;
 padding: 1rem 1.25rem;
-background: $color-rosa;
+background: $primary-color;
 
 .logo img {
     display: block;

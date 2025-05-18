@@ -1,85 +1,78 @@
-// _reset.scss
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@use 'variables' as *;
 
-// _agenda.scss
 .reservesuturno {
-    color: black;
-    font-size: $font-size-title;
-    font-family: $primary-font-family;
-    font-weight: 900;
-    white-space: nowrap;
-    text-align: center;
-    margin-bottom: $heading-margin-bottom;
-    padding: $button-padding;
+  color: $color-texto;
+  font-size: $tamano-titulo-lg;
+  font-family: $font-family-main;
+  font-weight: 900;
+  white-space: nowrap;
+  text-align: center;
+  margin-bottom: $heading-margin-bottom;
+  padding: $button-padding;
 }
 
 form {
-    background-color: $primary-bg-color;
-    padding: $form-padding;
-    max-width: 800px;
-    margin: auto;
-    box-shadow: $form-box-shadow;
-    border-radius: $form-border-radius;
+  background-color: $color-fondo-rosa;
+  padding: $form-padding;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: $form-box-shadow;
+  border-radius: $form-border-radius;
 }
 
 .forminput {
-    padding: 6px 20px;
+  padding: 6px 20px;
 }
 
 input, textarea {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 6px;
-    border: none;
-    border-left: 3px solid $input-border-color;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  border: none;
+  border-left: 3px solid $primary-color; 
 }
 
 textarea {
-    min-width: 100%;
-    resize: vertical;
-    min-height: 100px;
-    max-height: 200px;
-    font-family: sans-serif;
+  min-width: 100%;
+  resize: vertical;
+  min-height: 100px;
+  max-height: 200px;
+  font-family: sans-serif;
 }
 
 form h2 {
-    color: rgb(0, 0, 0);
-    text-align: center;
-    margin: 0;
-    margin-bottom: 8px;
-    font-size: $font-size-heading;
-    font-family: $primary-font-family;
+  color: $color-texto;
+  text-align: center;
+  margin: 0 0 8px 0;
+  font-size: $tamano-titulo-md; 
+  font-family: $font-family-titulos; 
 }
 
 label {
-    font-size: $font-size-label;
-    line-height: 2;
-    text-transform: uppercase;
-    font-family: $secondary-font-family;
+  font-size: $tamano-texto-sm;
+  line-height: 2;
+  text-transform: uppercase;
+  font-family: $font-family-alt;
 }
 
 a {
-    color: #000000;
-    text-decoration: none;
+  color: $color-texto;
+  text-decoration: none;
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 iframe {
-    display: block;
-    margin: 20px auto;
-    border: none;
-    max-width: 100%;
-    height: $iframe-height;
+  display: block;
+  margin: 20px auto;
+  border: none;
+  max-width: 100%;
+  height: $iframe-height;
 }
 
 html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
 }

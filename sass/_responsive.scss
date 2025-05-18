@@ -1,4 +1,4 @@
-@import 'variables'; 
+@use 'variables' as *;
 // ESTILOS BASE (mobile first)
 body {
   font-family: $font-family-main;
@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-  background-color: $color-principal;
+  background-color: $primary-color;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -62,7 +62,7 @@ body {
 }
 
 .footer {
-  background-color: $color-principal;
+  background-color: $primary-color;
   color: white;
   text-align: center;
   padding: 1rem;

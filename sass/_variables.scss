@@ -7,7 +7,7 @@ $font-family-contacto-alt: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande'
 // Colores
 $primary-color: #B14890;
 $secondary-color: #FFACF0;
-$color-fondo: #f0f0f0;
+$color-fondo: #d4d4d4;
 $color-texto: black;
 $color-footer: black;
 $color-titulo: black;
@@ -48,7 +48,7 @@ $button-padding: 15px;
 $service-primary-color: $primary-color;
 $service-font-family-main: $font-family-main;
 $service-font-family-alt: $font-family-alt;
-$service-font-size-title: 25px;
+$service-font-size-title: 35px;
 $service-font-size-list: 18px;
 
 // Galería
@@ -56,9 +56,9 @@ $gallery-primary-color: gray;
 $gallery-active-indicator-color: white;
 $gallery-button-bg-color: rgba(0, 0, 0, 0.5);
 $gallery-font-family-main: $font-family-titulos;
-$gallery-font-size-title: 70px;
-$gallery-carousel-height: 500px;
-$gallery-carousel-max-width: 800px;
+$gallery-font-size-title: 35px;
+$gallery-carousel-height: 250px;
+$gallery-carousel-max-width: 400px;
 
 // Contacto
 $contact-primary-color: $primary-color;

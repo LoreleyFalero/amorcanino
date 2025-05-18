@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 @mixin titulo-base($size: $tamano-titulo-lg) {
-  font-family: $fuente-titulos;
+  font-family: $font-family-titulos;
   font-weight: 900;
   text-align: center;
   margin-bottom: 70px;
@@ -17,4 +17,19 @@
   font-size: $tamano;
   text-transform: uppercase;
   letter-spacing: $espaciado;
+}
+
+@mixin flex-center($direction: row, $justify: center, $align: center, $gap: 1rem) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin contenedor($ancho: 90%, $padding: 20px, $margin: 20px auto, $text-align: left) {
+  width: $ancho;
+  padding: $padding;
+  margin: $margin;
+  text-align: $text-align;
 }
