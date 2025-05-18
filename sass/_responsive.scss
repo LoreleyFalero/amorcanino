@@ -1,88 +1,113 @@
-/* Estilos base */
+@import 'variables'; 
+// ESTILOS BASE (mobile first)
 body {
-  background-color: #f0f0f0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 16px;
+  font-family: $font-family-main;
   margin: 0;
   padding: 0;
+  background-color: $color-fondo;
+  color: $color-texto;
 }
 
-.amorcanino-titulo-principal {
-  font-size: 2rem; /* Desktop por defecto */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: black;
-  white-space: normal;
-  animation: fadeInUp 1.5s ease-out forwards;
-  opacity: 0;
-  transform: translateY(-20px);
-}
+.header {
+  background-color: $color-principal;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 
-/* Media Query para móvil */
-@media (max-width: 767px) {
-  .amorcanino-titulo-principal {
-    font-size: 1.5625rem;
-    padding: 0 1rem;
-    text-align: center;
-  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
-  .fondorosa {
-    padding: 20px;
-    font-size: 18px;
-  }
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
 
-  .imageninicio img {
-    max-width: 100%;
-  }
-
-  p {
-    font-size: 14px;
-    padding: 0.5rem;
-  }
-
-  .contenedor {
-    width: 90%;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
-/* Media Query para tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .amorcanino-titulo-principal {
-    font-size: 1.75rem;
-    text-align: center;
-  }
+.main {
+  padding: 1rem;
+  text-align: center;
+}
 
-  .fondorosa {
-    padding: 30px;
-    font-size: 20px;
-  }
+.presentacion,
+.servicios-destacados,
+.galeria {
+  margin-bottom: 2rem;
+}
 
-  p {
-    font-size: 16px;
-    padding: 1rem;
-  }
-
-  .contenedor {
-    width: 80%;
+.servicios-destacados__lista {
+  list-style: none;
+  padding: 0;
+  li {
+    margin-bottom: 0.5rem;
   }
 }
 
-/* Media Query para escritorio */
+.galeria__imagenes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.footer {
+  background-color: $color-principal;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+// TABLET
+@media (min-width: 768px) {
+  .header .menu {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .galeria__imagenes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// DESKTOP
 @media (min-width: 1024px) {
-  .amorcanino-titulo-principal {
-    font-size: 2rem;
+  .main {
+    padding: 2rem 4rem;
   }
 
-  .fondorosa {
-    padding: 40px;
-    font-size: 30px;
+  .presentacion,
+  .servicios-destacados,
+  .galeria {
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+    text-align: left;
   }
 
-  p {
-    font-size: 20px;
-    padding: 1rem 2rem;
+  .galeria__imagenes {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .contenedor {
-    width: 70%;
+  .header .menu {
+    justify-content: flex-end;
+    padding-top: 1rem;
+  }
+
+  .header__contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }

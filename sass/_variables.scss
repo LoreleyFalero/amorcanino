@@ -81,11 +81,6 @@ $iframe-height: 300px;
 $iframe-height-mobile: 220px;
 $heading-margin-bottom: 70px;
 
-// variables.scss
-$tamano-titulo-xl: 2.5rem;      // 40px en desktop
-$tamano-titulo-lg: 2rem;        // 32px en tablet
-$tamano-titulo-md: 1.5rem;      // 24px en móvil
-
 $mobile-min: 320px;
 $mobile-max: 767px;
 $tablet-min: 768px;
@@ -96,3 +91,7 @@ $desktop-min: 1024px;
 $ancho-mobile: 90%;
 $ancho-tablet: 80%;
 $ancho-desktop: 70%;
+
+$font-mobile: 16px;
+$font-tablet: 18px;
+$font-desktop: 20px;
