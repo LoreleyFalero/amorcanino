@@ -1,12 +1,5 @@
 @use 'variables';
 
-@media (min-width: variables.$mobile-min) and (max-width: variables.$mobile-max) {
-.contacto {
-    font-size: variables.$tamano-subtitulo-md;
-    white-space: normal;
-    padding: 10px;
-}
-
 section {
 background-color: variables.$color-fondo-rosa;
 padding: 30px;
@@ -114,11 +107,4 @@ a.btn.btn-success {
 
 .teesperamos {
     font-size: variables.$tamano-texto-xs;
-}
-}
-
-@media (min-width: variables.$tablet-min) and (max-width: variables.$tablet-max) {
-}
-
-@media (min-width: variables.$desktop-min) {
 }
