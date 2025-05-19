@@ -12,91 +12,60 @@
 @use 'responsive';
 
 
-body {
-background-color:  #d4d4d4;
-font-family: Arial, Helvetica, sans-serif;
-min-height: 100vh;
-width: 100%;
-}
-
-.amorcanino-titulo-principal {
-@include titulo-base;
-color: black;
-font-size: $tamano-titulo-xl; // 2rem = 32px
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-white-space: normal;
-animation: fadeInUp 1.5s ease-out forwards;
-opacity: 0;
-transform: translateY(-20px);
-}
-
-.amorcanino-titulo-secundario {
-color: $color-titulo;
-font-family: $font-family-main;
-font-size: 30px;
-display: inline-block;
-width: 43%;
-text-align: right;
-margin-top: 10px;
-}
-
-.fondorosa {
-background: $color-fondo-rosa;
-font-family: $font-family-main;
-font-size: 30px;
-padding: 40px;
-margin: 50px auto 2rem;
-max-width: 100%;
-border-radius: 20px;
-@include sombra;
-}
-
-.imageninicio {
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 40px;
-margin-bottom: 40px;
-
-img {
-width: 100%;
-max-width: 500px;
-height: auto;
-display: block;
-transition: transform 0.5s ease-in-out;
-
-&:hover {
-transform: scale(1.1);
-}
-}
-}
-
-p {
-color: $color-titulo;
-font-family: $font-family-main;
-font-size: 20px;
-width: 100%;
-padding: 10px;
-margin: auto;
-}
-
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
-max-width: 100%;
-overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $color-fondo;
+  font-family: $font-family-alt;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.amorcanino-titulo-principal {
+  @include titulo-base(2.1875rem);
+  color: $color-titulo;
+  font-size: $tamano-titulo-xl; // 2rem = 32px
+  font-family: $font-family-titulos;
+  white-space: normal;
+  animation: fadeInUp 1.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.amorcanino-titulo-secundario {
+  color: $color-titulo;
+  font-family: $font-family-main;
+  font-size: $tamano-subtitulo-lg; // usa variable para consistencia
+  display: block;
+  width: 100%;
+  text-align: center; // centrado horizontal
+  margin-top: 10px;
+}
+
+p {
+  color: $color-titulo;
+  font-family: $font-family-main;
+  font-size: $tamano-texto-md;
+  width: 100%;
+  padding: 0.625rem; // 10px en rem
+  margin: 0 auto;
 }
 
 .wrapper, .main-container {
-display: flex;
-flex-direction: column;
-min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-flex: 1;
+  flex: 1;
 }

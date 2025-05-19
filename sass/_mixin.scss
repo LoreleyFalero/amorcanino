@@ -1,12 +1,20 @@
 @use 'variables' as *;
 
-@mixin titulo-base($size: $tamano-titulo-lg) {
+@mixin titulo-base(
+  $font-size: $gallery-font-size-title,
+  $color: $color-titulo,
+  $margin-bottom: $heading-margin-bottom,
+  $padding: 0.9375rem,
+  $margin-top: 0
+) {
   font-family: $font-family-titulos;
   font-weight: 900;
+  font-size: $font-size;
+  color: $color;
   text-align: center;
-  margin-bottom: 70px;
-  padding: 15px;
-  font-size: $size;
+  margin-bottom: $margin-bottom;
+  padding: $padding;
+  margin-top: $margin-top;
 }
 
 @mixin sombra($x: 0, $y: 8px, $blur: 24px, $color: rgba(0, 0, 0, 0.4)) {

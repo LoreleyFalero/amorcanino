@@ -69,12 +69,10 @@ nav .menu a {
 .tituloprincipalinicio {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
-  font-size: 2.1875rem;
-  color: black;
   text-align: center;
-  margin-bottom: 4.375rem;
-  padding: 0.9375rem;
-  margin-top: 0;
+  margin-bottom: 70px;
+  padding: 15px;
+  font-size: 2.1875rem;
   color: black;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 900;
@@ -107,6 +105,19 @@ li {
   text-decoration: underline;
 }
 
+.fondorosa {
+  width: 55%;
+  padding: 40px;
+  margin: 50px;
+  text-align: left;
+  background: #B14890;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  white-space: nowrap;
+  font-size: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -126,57 +137,57 @@ footer p {
   margin-top: 0.5rem;
 }
 
-.contenedor-flex {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 2rem;
-}
-
 .imageninicio {
-  max-width: 400px;
-  flex: 1 1 300px;
+  position: absolute;
+  bottom: 140px;
+  left: 1260px;
+  overflow: hidden;
+  display: inline-block;
 }
 .imageninicio img {
+  transition: transform 0.5s ease-in-out;
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  transition: transform 0.5s ease-in-out;
 }
 .imageninicio:hover img {
   transform: scale(1.1);
 }
 
+p {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  width: 45%;
+  padding: 20px;
+  margin: 0;
+}
+
 .contenedor-flex {
   display: flex;
-  flex-direction: row;
   gap: 2rem;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: stretch;
+  justify-content: space-between;
   padding: 2rem;
+  flex-direction: row;
   background-color: transparent;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
-  margin-left: 0;
-  margin-right: auto;
+  margin: 0 auto;
+  margin-left: 0%;
 }
 .contenedor-flex .fondorosa {
-  background: #B14890;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.125rem;
-  padding: 2.5rem;
-  max-width: 650px;
-  margin-left: 6rem;
-  border-radius: 1.25rem;
+  background-color: #B14890;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
   color: black;
+  text-align: left;
   box-sizing: border-box;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 .contenedor-flex .fondorosa ul {
   padding: 0;
-  margin: 0 0 1rem 1.2rem;
+  margin: 0;
 }
 .contenedor-flex .fondorosa ul li {
   list-style: disc inside;
@@ -189,16 +200,15 @@ footer p {
   color: black;
 }
 .contenedor-flex .imageninicio {
-  width: 45%;
+  width: 50%;
   max-width: 100%;
-  align-self: flex-start;
   overflow: hidden;
 }
 .contenedor-flex .imageninicio picture {
   display: block;
 }
 .contenedor-flex .imageninicio picture img {
-  width: 100%;
+  width: 50%;
   height: auto;
   object-fit: cover;
   border-radius: 1rem;
@@ -277,7 +287,7 @@ nav .menu a {
 .serviciocompleto {
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 25px;
 }
@@ -295,7 +305,7 @@ nav .menu a {
 .lista li {
   color: black;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.125rem;
   padding: 6px 0;
   text-decoration: none;
 }
@@ -303,14 +313,13 @@ nav .menu a {
 .galeria h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
+  text-align: center;
+  margin-bottom: 70px;
+  padding: 15px;
   font-size: 2.1875rem;
   color: black;
-  text-align: center;
-  margin-bottom: 4.375rem;
-  padding: 0.9375rem;
-  margin-top: 0;
-  color: black;
-  font-size: 4rem;
+  font-size: 2.1875rem;
+  margin-top: 4rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   text-align: center;
@@ -318,18 +327,14 @@ nav .menu a {
   padding: 0.9375rem;
 }
 .galeria #carouselExampleIndicators {
-  width: 100%;
-  max-width: 800px;
-  min-width: 500px;
+  max-width: 400px !important;
   margin: 2rem auto;
-  aspect-ratio: 16/9;
 }
 .galeria #carouselExampleIndicators .carousel-item img {
-  width: 100% !important;
-  height: 100% !important;
+  height: 250px !important;
   object-fit: cover;
   border-radius: 0.625rem;
-  display: block;
+  width: 100% !important;
 }
 .galeria #carouselExampleIndicators .carousel-control-prev-icon,
 .galeria #carouselExampleIndicators .carousel-control-next-icon {
@@ -338,7 +343,7 @@ nav .menu a {
   padding: 1.25rem;
 }
 .galeria #carouselExampleIndicators .carousel-indicators button {
-  background-color: rgb(122, 122, 122);
+  background-color: gray;
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -348,129 +353,130 @@ nav .menu a {
   background-color: white;
   opacity: 1;
 }
+
 @media (max-width: 768px) {
-  .galeria #carouselExampleIndicators {
-    width: 90%;
-    min-width: auto;
-    max-width: none;
-    aspect-ratio: auto;
+  #carouselExampleIndicators {
+    max-width: 100% !important;
   }
-  .galeria #carouselExampleIndicators .carousel-item img {
-    height: auto !important;
-    width: 100% !important;
+  #carouselExampleIndicators .carousel-item img {
+    height: 150px !important;
   }
 }
-
-.contacto h1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 900;
-  font-size: 4rem;
-  color: black;
-  text-align: center;
-  margin-bottom: 4.375rem;
-  padding: 0.9375rem;
-  margin-top: 0;
-  color: black;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-bottom: 2rem;
-}
-
-section.contacto {
+section {
+  background-color: #B14890;
+  padding: 30px;
   border-radius: 15px;
   max-width: 900px;
-  margin: 0 auto 40px;
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
-
-.informacion {
-  background-color: #B14890;
-  border-radius: 15px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+section h1 {
+  font-weight: 900;
+  text-align: center;
+  font-size: 2.5rem;
+}
+section .informacion {
   width: 100%;
   max-width: 600px;
   text-align: center;
   margin-bottom: 10px;
 }
-.informacion .detalle {
+section .informacion .detalle {
   margin-bottom: 10px;
 }
-.informacion .detalle .titulo {
+section .informacion .detalle .titulo {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.125rem;
   margin-bottom: 5px;
 }
-
-.mapa {
+section .mapa {
   width: 100%;
   max-width: 700px;
 }
-.mapa iframe {
+section .mapa iframe {
   width: 100% !important;
   height: 400px !important;
   border: none;
   border-radius: 10px;
 }
-
-a.btn.btn-success {
-  background-color: #25D366;
-  color: white;
+section a.btn.btn-success {
   padding: 12px 30px;
   font-size: 1.125rem;
   border-radius: 10px;
   max-width: 200px;
   width: 100%;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
 }
-a.btn.btn-success:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.6);
+section a.btn.btn-success:hover {
+  background-color: rgb(17.03125, 91.96875, 57.225);
 }
-
-.instagram-container {
+section .instagram-container {
   width: 100%;
   max-width: 600px;
   display: flex;
   justify-content: center;
   margin-top: 15px;
 }
-.instagram-container .instagram-box {
+section .instagram-container .instagram-box {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.instagram-container .instagram-box .logo-instagram {
+section .instagram-container .instagram-box .logo-instagram {
   width: 40px;
 }
-
-.teesperamos {
+section .teesperamos {
   font-size: 1rem;
   margin-top: 20px;
 }
 
+.informacion {
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.mapa {
+  height: 15.625rem;
+  margin: 15px 0;
+}
+
+a.btn.btn-success {
+  max-width: 100%;
+  font-size: 1rem;
+}
+
+.instagram-container {
+  flex-direction: column;
+}
+.instagram-container .instagram-box {
+  flex-direction: column;
+  gap: 8px;
+}
+.instagram-container .instagram-box .logo-instagram {
+  width: 35px;
+}
+
+.teesperamos {
+  font-size: 0.875rem;
+}
+
 .reservesuturno {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 900;
-  font-size: 4rem;
   color: black;
+  font-size: 1.75rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 900;
+  white-space: nowrap;
   text-align: center;
   margin-bottom: 4.375rem;
   padding: 0.9375rem;
-  margin-top: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 900;
-  text-align: center;
-  margin-bottom: 4.375rem;
-  padding: 0.9375rem;
-  color: black;
 }
 
 form {
-  background-color: rgb(202, 202, 202);
+  background-color: #B14890;
   padding: 1.875rem;
   max-width: 800px;
   margin: auto;
@@ -591,18 +597,6 @@ body {
   border-radius: 10px;
 }
 
-.imageninicio {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  max-width: 200px;
-  z-index: 10;
-}
-.imageninicio img {
-  width: 100%;
-  height: auto;
-}
-
 .footer {
   background-color: #B14890;
   color: white;
@@ -620,18 +614,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.imageninicio {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  max-width: 200px;
-  z-index: 10;
-}
-.imageninicio img {
-  width: 100%;
-  height: auto;
-}
-
 @media (min-width: 1024px) {
   .main {
     padding: 2rem 4rem;
@@ -657,12 +639,6 @@ body {
     flex-wrap: wrap;
   }
 }
-.imageninicio {
-  right: 3rem;
-  bottom: 2rem;
-  max-width: 300px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -684,12 +660,10 @@ body {
 .amorcanino-titulo-principal {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
-  font-size: 2.1875rem;
-  color: black;
   text-align: center;
-  margin-bottom: 4.375rem;
-  padding: 0.9375rem;
-  margin-top: 0;
+  margin-bottom: 70px;
+  padding: 15px;
+  font-size: 1.75rem;
   color: black;
   font-size: 2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -707,6 +681,17 @@ body {
   width: 100%;
   text-align: center;
   margin-top: 10px;
+}
+
+.fondorosa {
+  background: #B14890;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.125rem;
+  padding: 2.5rem;
+  margin: 3rem auto 1rem;
+  max-width: 100%;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 p {
@@ -728,4 +713,4 @@ main {
   flex: 1;
 }
 
-/*# sourceMappingURL=estilos.css.map */
+/*# sourceMappingURL=estilos.cs.map */

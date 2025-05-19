@@ -1,117 +1,95 @@
-@use 'variables';
+@use 'variables' as *;
+@use 'mixin' as *;
 @use "sass:color";
 
-section {
-background-color: variables.$color-fondo-rosa;
-padding: 30px;
-border-radius: 15px;
-max-width: 900px;
-margin: 40px auto; // centrado horizontal con margen arriba/abajo
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 25px;
+.contacto {
+  h1 {
+    @include titulo-base($gallery-font-size-title);
+    color: $color-titulo;
+    font-family: $gallery-font-family-main;
+    margin-bottom: 2rem;
+  }
+}
 
-h1 {
-  font-weight: 900;
-  text-align: center;
-font-size: 2.5rem;
+section.contacto {
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 0 auto 40px; // margen abajo para separar de lo siguiente
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .informacion {
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
+  background-color: #B14890;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 10px;
+
+  .detalle {
     margin-bottom: 10px;
 
-.detalle {
-margin-bottom: 10px;
-
     .titulo {
-        font-weight: bold;
-        font-size: variables.$tamano-texto-md;
-        margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 2rem;
+      margin-bottom: 5px;
     }
-    }
+  }
 }
 
 .mapa {
-    width: 100%;
-    max-width: 700px;
+  width: 100%;
+  max-width: 700px;
 
-    iframe {
+  iframe {
     width: 100% !important;
     height: 400px !important;
     border: none;
     border-radius: 10px;
-    }
+  }
 }
 
 a.btn.btn-success {
-    padding: 12px 30px;
-    font-size: variables.$tamano-texto-md;
-    border-radius: 10px;
-    max-width: 200px;
-    width: 100%;
-    text-align: center;
-    transition: background-color 0.3s ease;
+  background-color: #25D366;  // verde WhatsApp fijo
+  color: white;
+  padding: 12px 30px;
+  font-size: $tamano-texto-md;
+  border-radius: 10px;
+  max-width: 200px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    &:hover {
-    background-color:  color.adjust(#198754, $lightness: -10%);
-    }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);  // pequeño zoom
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.6); // sombra verde suave
+  }
 }
 
 .instagram-container {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
 
-    .instagram-box {
+  .instagram-box {
     display: flex;
     align-items: center;
     gap: 10px;
 
     .logo-instagram {
-        width: 40px;
+      width: 40px;
     }
-    }
+  }
 }
 
 .teesperamos {
-    font-size: variables.$tamano-texto-sm;
-    margin-top: 20px;
-}
-}
-
-.informacion {
-    margin: 20px 0;
-    padding: 10px;
-}
-
-.mapa {
-    height: variables.$mapa-height-mobile;
-    margin: 15px 0;
-}
-
-a.btn.btn-success {
-    max-width: 100%;
-    font-size: variables.$tamano-texto-sm;
-}
-
-.instagram-container {
-    flex-direction: column;
-    .instagram-box {
-    flex-direction: column;
-    gap: 8px;
-
-    .logo-instagram {
-        width: 35px;
-    }
-    }
-}
-
-.teesperamos {
-    font-size: variables.$tamano-texto-xs;
+  font-size: $tamano-texto-sm;
+  margin-top: 20px;
 }

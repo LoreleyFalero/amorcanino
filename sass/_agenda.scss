@@ -1,18 +1,18 @@
 @use 'variables' as *;
+@use 'mixin' as *;
 
 .reservesuturno {
-  color: $color-texto;
-  font-size: $tamano-titulo-lg;
-  font-family: $font-family-main;
+  @include titulo-base($gallery-font-size-title);
+  font-family: $gallery-font-family-main;
   font-weight: 900;
-  white-space: nowrap;
   text-align: center;
   margin-bottom: $heading-margin-bottom;
-  padding: $button-padding;
+  padding: 0.9375rem;
+  color: black; 
 }
 
 form {
-  background-color: $color-fondo-rosa;
+  background-color: rgb(202, 202, 202);
   padding: $form-padding;
   max-width: 800px;
   margin: auto;

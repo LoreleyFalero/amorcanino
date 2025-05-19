@@ -2,86 +2,76 @@
 @use 'mixin' as *;
 
 body {
-background-color: $color-fondo !important;
-font-family: $font-family-main;
-min-height: 100vh;
-width: 100%;
+  background-color: $color-fondo !important;
+  font-family: $font-family-main;
+  min-height: 100vh;
+  width: 100%;
 }
 
 nav {
-@include flex-center(row, space-between, center, 1.25rem);
-background-color: $secondary-color !important;
-font-family: $font-family-main;
-text-align: center;
-text-transform: uppercase;
-letter-spacing: 5px;
-word-spacing: 90px;
-font-size: 20px;
-width: 100%;
-padding: 15px 20px;
+  @include flex-center(row, space-between, center, 1.25rem);
+  background-color: $secondary-color !important;
+  font-family: $font-family-main;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  word-spacing: 90px;
+  font-size: 20px;
+  width: 100%;
+  padding: 15px 20px;
 
-.logo img {
+  .logo img {
     display: block;
     height: 100px;
-}
+  }
 
-.menu {
+  .menu {
     @include flex-center(row, center, center, 5rem);
     flex-grow: 1;
     width: 100%;
 
     a {
-    color: $color-titulo;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
+      color: $color-titulo;
+      text-decoration: none;
+      font-size: 25px;
+      font-weight: bold;
+      text-transform: uppercase;
     }
-}
+  }
 }
 
 .tituloprincipalinicio {
-@include titulo-base(2.1875rem);
-color: $color-titulo;
-font-family: $font-family-main;
-font-weight: 900;
-white-space: nowrap;
+  @include titulo-base(2.1875rem);
+  color: $color-titulo;
+  font-family: $font-family-main;
+  font-weight: 900;
+  white-space: nowrap;
 
-h1 {
+  h1 {
     opacity: 0;
     transform: translateY(-20px);
     animation: fadeInUp 1.5s ease-out forwards;
-}
+  }
 }
 
 @keyframes fadeInUp {
-to {
+  to {
     opacity: 1;
     transform: translateY(0);
-}
+  }
 }
 
 .titulosecundario {
-color: $color-titulo;
-font-family: $font-family-main;
-font-size: 30px;
-display: inline-block;
-width: 43%;
-text-align: right;
-margin-top: 10px;
+  color: $color-titulo;
+  font-family: $font-family-main;
+  font-size: 30px;
+  display: inline-block;
+  width: 43%;
+  text-align: right;
+  margin-top: 10px;
 }
 
 li {
-color: white;
-text-decoration: underline;
-}
-
-.fondorosa {
-@include contenedor(55%, 40px, 50px, left);
-background: $color-fondo-rosa;
-font-family: $font-family-main;
-white-space: nowrap;
-font-size: 30px;
-border-radius: 20px;
-@include sombra(0, 0, 15px, rgba(0, 0, 0, 0.2));
+  color: white;
+  text-decoration: underline;
 }

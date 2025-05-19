@@ -1,35 +1,65 @@
 @use 'variables' as *;
+@use 'mixin' as *;
 
-nav {
-display: flex;
-align-items: center;
-justify-content: space-between;
-font-family: $font-family-titulos;
-text-transform: uppercase;
-letter-spacing: 5px;
-width: 100%;
-min-height: 100px;
-padding: 1rem 1.25rem;
-background: $primary-color;
+.contenedor-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem;
+  background-color: transparent;
+  width: 100%; 
+  max-width: 1200px;
+  margin-left: 0; 
+  margin-right: auto; 
 
-.logo img {
-    display: block;
-    height: 100px;
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    gap: 5rem;
-    width: 100%;
-
-    a {
-    color: $color-texto;
-    text-decoration: none;
+  .fondorosa {
+    background: $color-fondo-rosa;
+    font-family: $font-family-main;
     font-size: $tamano-texto-lg;
-    font-weight: bold;
-    text-transform: uppercase;
+    padding: 2.5rem;
+    max-width: 650px;
+    margin-left: 6rem;
+    border-radius: 1.25rem;
+    color: $color-texto;
+    box-sizing: border-box;
+    @include sombra;
+
+    ul {
+      padding: 0;
+      margin: 0 0 1rem 1.2rem;
+
+      li {
+        list-style: disc inside;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
     }
-}
+
+    p {
+      margin-bottom: 1rem;
+      font-size: $tamano-texto-md;
+      color: $color-texto;
+    }
+  }
+
+  .imageninicio {
+    width: 45%;
+    max-width: 100%;
+    align-self: flex-start;
+    overflow: hidden;
+
+    picture {
+      display: block;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 1rem;
+        display: block;
+      }
+    }
+  }
 }
