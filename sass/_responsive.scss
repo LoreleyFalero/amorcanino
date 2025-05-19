@@ -1,148 +1,144 @@
 @use 'variables' as *;
 
-// ESTILOS BASE (mobile first)
+// Estilos base: mobile first
 body {
-  font-family: $font-family-main;
-  margin: 0;
-  padding: 0;
-  background-color: $color-fondo;
-  color: $color-texto;
+  font-size: 1rem;
 }
 
-.header {
-  background-color: $primary-color;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-
-  .menu {
-    display: flex;
+// MÓVIL (hasta 576px)
+@media (max-width: 576px) {
+  nav .menu {
     flex-direction: column;
-    gap: 0.5rem;
-
-    a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-.main {
-  padding: 1rem;
-  text-align: center;
-}
-
-.presentacion,
-.servicios-destacados,
-.galeria {
-  margin-bottom: 2rem;
-}
-
-.servicios-destacados__lista {
-  list-style: none;
-  padding: 0;
-  li {
-    margin-bottom: 0.5rem;
-  }
-}
-
-.galeria__imagenes {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-
-  img {
-    width: 100%;
-    border-radius: 10px;
-  }
-}
-
-.imageninicio {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  max-width: 200px;
-  z-index: 10;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.footer {
-  background-color: $primary-color;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-// TABLET
-@media (min-width: 768px) {
-  .header .menu {
-    flex-direction: row;
-    justify-content: center;
     gap: 1rem;
   }
 
-  .galeria__imagenes {
-    grid-template-columns: repeat(2, 1fr);
+  h1 {
+    font-size: 2rem;
+    text-align: center;
   }
-}
 
-.imageninicio {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  max-width: 200px;
-  z-index: 10;
-
-  img {
+  .titulosecundario,
+  .titulosecundarioservicios {
     width: 100%;
-    height: auto;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .contenedor-flex {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .contenedor-flex .imageninicio,
+  .contenedor-flex .fondorosa {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .lista {
+    width: 100%;
+    padding: 1rem;
   }
 }
 
-// DESKTOP
-@media (min-width: 1024px) {
-  .main {
-    padding: 2rem 4rem;
-  }
-
-  .presentacion,
-  .servicios-destacados,
-  .galeria {
-    max-width: 1200px;
-    margin: 0 auto 3rem auto;
-    text-align: left;
-  }
-
-  .galeria__imagenes {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .header .menu {
-    justify-content: flex-end;
-    padding-top: 1rem;
-  }
-
-  .header__contenido {
+@media (max-width: 576px) {
+  .contenedor {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .columna {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .lista {
+    width: 100%;
+    padding-left: 3rem; // para que el ul no quede pegado a la izquierda
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .serviciobasico,
+  .serviciocompleto {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .tituloprincipalinicio,
+  .tituloprincipalinicioservicios,
+  .reservesuturno,
+  .galeria h1,
+  .contacto h1 {
+    font-size: 2rem !important; // o ajustalo según necesites
+    text-align: center;
+    white-space: normal; // permite que el texto baje de línea
+    padding: 0 1rem;
+  }
+}
+
+// ---------------------------
+// TABLET (577px a 991px)
+@media (min-width: 577px) and (max-width: 991px) {
+  nav .menu {
+    gap: 2rem;
     flex-wrap: wrap;
   }
-}
 
-.imageninicio {
-    right: 3rem;
-    bottom: 2rem;
-    max-width: 300px;
+  .contenedor-flex {
+    flex-direction: column;
+    align-items: center;
   }
 
-  
+  .contenedor-flex .fondorosa,
+  .contenedor-flex .imageninicio {
+    width: 80%;
+  }
+
+  .lista {
+    width: 80%;
+  }
+
+  .galeria h1,
+  .contacto h1 {
+    font-size: 3rem;
+  }
+}
+
+// ---------------------------
+// DESKTOP (992px o más)
+@media (min-width: 992px) {
+  nav .menu {
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  .contenedor-flex {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .contenedor-flex .fondorosa {
+    max-width: 450px;
+    margin-left: 6rem;
+  }
+
+  .contenedor-flex .imageninicio {
+    width: 55%; /* Aumenta el ancho para que la imagen crezca */
+    max-width: 700px; /* Limita el tamaño máximo para no excederse */
+  }
+
+  .lista {
+    width: 500px;
+  }
+
+  .galeria h1,
+  .contacto h1 {
+    font-size: 4rem;
+  }
+}
