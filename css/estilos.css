@@ -110,6 +110,10 @@ li {
   text-decoration: underline;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -127,6 +131,17 @@ footer p {
   font-size: 0.875rem;
   color: black;
   margin-top: 0.5rem;
+}
+
+.volver-arriba {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  background-color: #e67e99;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .contenedor-flex {
@@ -303,6 +318,17 @@ nav .menu a {
   text-decoration: none;
 }
 
+.volver-arriba {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  background-color: #e67e99;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .galeria h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
@@ -362,6 +388,17 @@ nav .menu a {
     height: auto !important;
     width: 100% !important;
   }
+}
+
+.volver-arriba {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  background-color: #e67e99;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .contacto h1 {
@@ -455,6 +492,17 @@ a.btn.btn-success:hover {
   margin-top: 20px;
 }
 
+.volver-arriba {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  background-color: #e67e99;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .reservesuturno {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
@@ -535,6 +583,17 @@ iframe {
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+.volver-arriba {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  background-color: #e67e99;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 body {
