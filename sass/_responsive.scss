@@ -129,8 +129,9 @@ body {
   }
 
   .contenedor-flex .imageninicio {
-    width: 55%; /* Aumenta el ancho para que la imagen crezca */
-    max-width: 700px; /* Limita el tamaño máximo para no excederse */
+    width: 55%;
+    max-width: 700px; 
+    margin-top: 2rem; 
   }
 
   .lista {

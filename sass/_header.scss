@@ -65,10 +65,14 @@ nav {
   color: $color-titulo;
   font-family: $font-family-main;
   font-size: 30px;
-  display: inline-block;
-  width: 43%;
-  text-align: right;
-  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+
+  h2 {
+    margin: 0 auto;
+    display: inline-block;
+  }
 }
 
 li {

@@ -96,10 +96,13 @@ nav .menu a {
   color: black;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 30px;
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+}
+.titulosecundario h2 {
+  margin: 0 auto;
   display: inline-block;
-  width: 43%;
-  text-align: right;
-  margin-top: 10px;
 }
 
 li {
@@ -151,54 +154,53 @@ footer p {
 
 .contenedor-flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2rem;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 2rem;
   background-color: transparent;
   width: 100%;
   max-width: 1200px;
-  margin-left: 0;
-  margin-right: auto;
+  margin: 0 auto;
 }
-.contenedor-flex .fondorosa {
+
+.fondorosa {
   background: #B14890;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.125rem;
   padding: 2.5rem;
   max-width: 650px;
-  margin-left: 6rem;
   border-radius: 1.25rem;
   color: black;
   box-sizing: border-box;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
-.contenedor-flex .fondorosa ul {
+.fondorosa ul {
   padding: 0;
   margin: 0 0 1rem 1.2rem;
 }
-.contenedor-flex .fondorosa ul li {
+.fondorosa ul li {
   list-style: disc inside;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
-.contenedor-flex .fondorosa p {
+.fondorosa p {
   margin-bottom: 1rem;
   font-size: 1.125rem;
   color: black;
 }
-.contenedor-flex .imageninicio {
-  width: 45%;
+
+.imageninicio {
+  width: 90%;
   max-width: 100%;
-  align-self: flex-start;
   overflow: hidden;
-  padding-left: 2rem;
+  margin-top: 2rem;
 }
-.contenedor-flex .imageninicio picture {
+.imageninicio picture {
   display: block;
 }
-.contenedor-flex .imageninicio picture img {
+.imageninicio picture img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -278,7 +280,7 @@ nav .menu a {
 .serviciocompleto {
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 25px;
 }
@@ -296,7 +298,7 @@ nav .menu a {
 .lista li {
   color: black;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   padding: 6px 0;
   text-decoration: none;
 }
@@ -639,7 +641,9 @@ body {
     margin-left: 6rem;
   }
   .contenedor-flex .imageninicio {
-    width: 70%; /* Aumenta el ancho para que la imagen crezca */
+    width: 55%;
+    max-width: 700px;
+    margin-top: 2rem;
   }
   .lista {
     width: 500px;
