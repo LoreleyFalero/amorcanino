@@ -629,6 +629,13 @@ body {
   font-size: 1rem;
 }
 
+img,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 @media (max-width: 576px) {
   nav .menu {
     flex-direction: column;
@@ -644,37 +651,25 @@ body {
     text-align: center;
     font-size: 1.2rem;
   }
-  .contenedor-flex {
+  .contenedor-flex,
+  .contenedor {
     flex-direction: column;
     padding: 1rem;
+    box-sizing: border-box;
+  }
+  .columna,
+  .lista {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-left: 3rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
   }
   .contenedor-flex .imageninicio,
   .contenedor-flex .fondorosa {
     width: 100%;
     margin-left: 0;
-  }
-  .lista {
-    width: 100%;
-    padding: 1rem;
-  }
-}
-@media (max-width: 576px) {
-  .contenedor {
-    display: flex;
-    flex-direction: column;
-    padding: 0 1rem;
-    box-sizing: border-box;
-  }
-  .columna {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-  .lista {
-    width: 100%;
-    padding-left: 3rem;
-    box-sizing: border-box;
-    word-break: break-word;
-    overflow-wrap: break-word;
   }
   .serviciobasico,
   .serviciocompleto {
@@ -694,24 +689,14 @@ body {
     padding: 0 1rem;
   }
 }
-@media (min-width: 577px) and (max-width: 1200px) {
+@media (min-width: 577px) and (max-width: 767px) {
   nav .menu {
-    flex-direction: row;
-    gap: 3rem;
+    flex-direction: column;
+    gap: 2rem;
     justify-content: center;
     text-align: center;
-    word-spacing: normal;
-    letter-spacing: normal;
-    font-size: 16px;
-  }
-  nav .logo {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 1rem;
   }
   .contenedor-flex {
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
@@ -722,24 +707,63 @@ body {
     width: 90%;
   }
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     text-align: center;
     word-break: break-word;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  nav .menu {
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+  }
+  nav .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .contenedor-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .contenedor-flex .fondorosa,
+  .contenedor-flex .imageninicio {
+    width: 90%;
+  }
+  .tituloprincipalinicio {
+    font-size: 1.8rem;
+    text-align: center;
+    word-break: break-word;
+  }
+  .tituloprincipalinicio,
+  .tituloprincipalinicioservicios,
+  .reservesuturno,
+  .galeria h1,
+  .contacto h1,
+  .agenda h1 {
+    font-size: 2rem;
+    text-align: center;
+    white-space: normal;
+    padding: 0 1rem;
   }
   .volver-arriba {
     font-size: 1rem;
     padding: 0.5rem 1rem;
   }
-  img,
-  iframe {
-    height: auto;
-    display: block;
-  }
 }
-@media (min-width: 992px) {
+@media (min-width: 1280px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   nav .menu {
     flex-direction: row;
-    gap: 5rem;
   }
   .contenedor-flex {
     flex-direction: row;
@@ -758,7 +782,8 @@ body {
     width: 500px;
   }
   .galeria h1,
-  .contacto h1 {
+  .contacto h1,
+  .agenda h1 {
     font-size: 4rem;
   }
 }
