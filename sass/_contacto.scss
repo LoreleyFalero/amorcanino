@@ -104,3 +104,18 @@ a.btn.btn-success {
       text-decoration: none;
       font-weight: bold;
     }
+
+    .boton-instagram {
+  display: inline-block;
+  background-color: #e1306c; // color típico de Instagram
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #c1275a;
+  }
+}

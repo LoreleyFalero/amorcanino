@@ -167,6 +167,21 @@ footer p {
   transform: scale(1.1);
 }
 
+.boton-instagram-inline {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background-color: #e1306c;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+.boton-instagram-inline:hover {
+  background-color: #B14890;
+}
+
 .contenedor-flex {
   display: flex;
   flex-direction: column;
@@ -503,6 +518,20 @@ a.btn.btn-success:hover {
   font-weight: bold;
 }
 
+.boton-instagram {
+  display: inline-block;
+  background-color: #e1306c;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.boton-instagram:hover {
+  background-color: #c1275a;
+}
+
 .reservesuturno {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
@@ -665,25 +694,46 @@ body {
     padding: 0 1rem;
   }
 }
-@media (min-width: 577px) and (max-width: 991px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   nav .menu {
-    gap: 2rem;
-    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    text-align: center;
+    word-spacing: normal;
+    letter-spacing: normal;
+    font-size: 16px;
+  }
+  nav .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
   }
   .contenedor-flex {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
+    padding: 1rem;
   }
   .contenedor-flex .fondorosa,
   .contenedor-flex .imageninicio {
-    width: 80%;
+    width: 90%;
   }
-  .lista {
-    width: 80%;
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    word-break: break-word;
   }
-  .galeria h1,
-  .contacto h1 {
-    font-size: 3rem;
+  .volver-arriba {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  img,
+  iframe {
+    height: auto;
+    display: block;
   }
 }
 @media (min-width: 992px) {

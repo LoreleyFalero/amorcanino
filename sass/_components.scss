@@ -26,3 +26,19 @@
     transform: scale(1.1);
   }
 }
+
+.boton-instagram-inline {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background-color: #e1306c;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #B14890;
+  }
+}
