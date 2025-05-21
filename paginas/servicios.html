@@ -9,15 +9,20 @@
 <body>
     <header>
          <nav id="menu">
-            <img src="../imagenes/amorcanino.png" width="100px" alt="Logo de Amor Canino">
-                <div class="menu">
-            <a href="../index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="galeria.html">Galería</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="agenda.html">Agenda</a>
-                </div>
-        </nav>
+  <div class="logo">
+    <img src="../imagenes/amorcanino.png" alt="Logo de Amor Canino" />
+  </div>
+
+  <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú">☰</button>
+
+  <div class="menu" id="nav-links">
+<a href="../index.html">Inicio</a>
+<a href="servicios.html">Servicios</a>
+<a href="galeria.html">Galería</a>
+<a href="contacto.html">Contacto</a>
+<a href="agenda.html">Agenda</a>
+  </div>
+</nav>
     </header>
     <main>
         <div class="tituloprincipalinicioservicios">
@@ -58,5 +63,13 @@
         <p>Montevideo, Uruguay</p>
         <p>Copyright ® 2025 - Todos los derechos reservados.</p>
     </footer>
+    <script>
+  const btnMenu = document.getElementById('btn-menu');
+  const navLinks = document.getElementById('nav-links');
+
+  btnMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('activo');
+  });
+</script>
 </body>
 </html>

@@ -82,6 +82,9 @@ $iframe-height: 18.75rem;          // 300px
 $iframe-height-mobile: 13.75rem;   // 220px
 $heading-margin-bottom: 4.375rem;  // 70px
 
-$mobile: 576px;
-$tablet: 1279px;
-$desktop: 992px;
+/* Variables de breakpoints */
+$breakpoint-mobile-sm: 480px;
+$breakpoint-mobile-lg: 768px;
+$breakpoint-tablet-lg: 1279px;
+$breakpoint-desktop: 1280px;
+

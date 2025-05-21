@@ -1,15 +1,9 @@
+@use 'sass:color';
 @use 'variables' as *;
 
 // Estilos base: mobile first
 body {
   font-size: 1rem;
-}
-
-img,
-iframe {
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
 
 // MÓVIL (hasta 576px)
@@ -31,36 +25,50 @@ iframe {
     font-size: 1.2rem;
   }
 
-  .contenedor-flex,
-  .contenedor {
+  .contenedor-flex {
     flex-direction: column;
     padding: 1rem;
-    box-sizing: border-box;
   }
 
-  .columna,
-  .lista {
-    width: 100%;
-    margin-bottom: 2rem;
-    padding-left: 3rem;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    box-sizing: border-box;
-  }
-
-    .contenedor-flex .imageninicio,
-    .contenedor-flex .fondorosa {
+  .contenedor-flex .imageninicio,
+  .contenedor-flex .fondorosa {
     width: 100%;
     margin-left: 0;
   }
 
-    .serviciobasico,
-    .serviciocompleto {
+  .lista {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .columna {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .lista {
+    width: 100%;
+    padding-left: 3rem; // para que el ul no quede pegado a la izquierda
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .serviciobasico,
+  .serviciocompleto {
     font-size: 1.5rem;
     text-align: center;
   }
 }
-
 
 @media (max-width: 768px) {
   .tituloprincipalinicio,
@@ -75,96 +83,55 @@ iframe {
   }
 }
 
-// TABLET CHICA (577px a 767px)
-@media (min-width: 577px) and (max-width: 767px) {
+// ---------------------------
+// TABLET (577px a 1199px)
+@media (min-width: 577px) and (max-width: 1199px) {
   nav .menu {
-    flex-direction: column;
     gap: 2rem;
-    justify-content: center;
-    text-align: center;
+    flex-wrap: wrap;
   }
 
   .contenedor-flex {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    padding: 1rem;
   }
 
   .contenedor-flex .fondorosa,
   .contenedor-flex .imageninicio {
-    width: 90%;
+    width: 80%;
   }
 
-  h1 {
-    font-size: 2.3rem;
-    text-align: center;
-    word-break: break-word;
-  }
-}
-
-// TABLET (768px a 1279px)
-@media (min-width: 768px) and (max-width: 1279px) {
-  nav .menu {
-    flex-direction: row;
-    gap: 3rem;
-    justify-content: center;
-    text-align: center;
-    font-size: 16px;
-  }
-
-  nav .logo {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .contenedor-flex {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem;
-  }
-
-  .contenedor-flex .fondorosa,
-  .contenedor-flex .imageninicio {
-    width: 90%;
+  .lista {
+    width: 80%;
   }
 
   .tituloprincipalinicio {
-    font-size: 1.8rem;
-    text-align: center;
-    word-break: break-word;
-  }
-
-  .tituloprincipalinicio,
-  .tituloprincipalinicioservicios,
-  .reservesuturno,
-  .galeria h1,
-  .contacto h1,
-  .agenda h1 {
-    font-size: 2rem;
+    font-size: 2rem;   
     text-align: center;
     white-space: normal;
-    padding: 0 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
   }
 
-  .volver-arriba {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
+.tituloprincipalinicioservicios {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    white-space: normal;
+    text-align: center;
+  }
+
+
+  .galeria h1,
+  .contacto h1 {
+    font-size: 3rem;
   }
 }
 
-// DESKTOP (1280px o más)
-@media (min-width: 1280px) {
-  body {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
+// ---------------------------
+// DESKTOP (992px o más)
+@media (min-width: 992px) {
   nav .menu {
     flex-direction: row;
+    gap: 5rem;
   }
 
   .contenedor-flex {
@@ -179,8 +146,8 @@ iframe {
 
   .contenedor-flex .imageninicio {
     width: 55%;
-    max-width: 700px;
-    margin-top: 2rem;
+    max-width: 700px; 
+    margin-top: 2rem; 
   }
 
   .lista {
@@ -188,8 +155,202 @@ iframe {
   }
 
   .galeria h1,
-  .contacto h1,
-  .agenda h1 {
+  .contacto h1 {
     font-size: 4rem;
+  }
+}
+
+// NAV
+// ------------------
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    height: auto;
+
+    @media (max-width: 480px) {
+      height: 80px;
+    }
+  }
+
+  .hamburguesa {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+
+    @media (max-width: 768px) {
+      display: block;
+      align-self: flex-end;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .menu {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      background-color: color.adjust($secondary-color, $lightness: 10%);
+      padding: 1rem;
+      width: 100%;
+      border-radius: 10px;
+
+      a {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+      }
+
+      &.activo {
+        display: flex;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+
+      a {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+// Responsive para Agenda
+
+// MOBILE (hasta 576px)
+@media (max-width: 576px) {
+  .reservesuturno {
+    font-size: 1.5rem; // un tamaño legible para móvil
+    padding: 0.5rem;
+  }
+
+  form {
+    max-width: 100%;
+    padding: 1rem;
+    box-shadow: none; // para que no se vea tan cargado en móvil
+  }
+
+  .forminput {
+    padding: 8px 12px;
+  }
+
+  input, textarea {
+    font-size: 1rem;
+  }
+
+  textarea {
+    min-height: 80px;
+    max-height: 150px;
+  }
+
+  form h2 {
+    font-size: 1.5rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  iframe {
+    height: 200px;
+  }
+
+  .volver-arriba {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+// TABLET (577px a 1199px)
+@media (min-width: 577px) and (max-width: 1199px) {
+  .reservesuturno {
+    font-size: 3rem;
+  }
+
+  form {
+    max-width: 700px;
+    padding: 1.5rem;
+    box-shadow: $form-box-shadow;
+  }
+
+  input, textarea {
+    font-size: 1.1rem;
+  }
+
+  textarea {
+    min-height: 100px;
+    max-height: 180px;
+  }
+
+  form h2 {
+    font-size: 1.8rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  iframe {
+    height: 300px;
+  }
+
+  .volver-arriba {
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+// DESKTOP (992px o más)
+@media (min-width: 992px) {
+  .reservesuturno {
+    font-size: 4rem;
+  }
+
+  form {
+    max-width: 800px;
+    padding: $form-padding;
+    box-shadow: $form-box-shadow;
+  }
+
+  input, textarea {
+    font-size: 1.2rem;
+  }
+
+  textarea {
+    min-height: 120px;
+    max-height: 200px;
+  }
+
+  form h2 {
+    font-size: $tamano-titulo-md;
+  }
+
+  label {
+    font-size: $tamano-texto-sm;
+  }
+
+  iframe {
+    height: $iframe-height;
+  }
+
+  .volver-arriba {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.2rem;
   }
 }
