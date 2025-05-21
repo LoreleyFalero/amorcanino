@@ -197,7 +197,7 @@ footer p {
 }
 
 .fondorosa {
-  background: #B14890;
+  background: #b14890;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.125rem;
   padding: 2.5rem;
@@ -719,9 +719,7 @@ body {
     margin-bottom: 2rem;
   }
   .tituloprincipalinicioservicios {
-    font-size: clamp(1.5rem, 3vw, 3rem);
-    white-space: normal;
-    text-align: center;
+    font-size: clamp(1.5rem, 2.5vw, 3rem) !important;
   }
   .galeria h1,
   .contacto h1 {
