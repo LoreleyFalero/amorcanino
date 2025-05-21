@@ -14,7 +14,7 @@
 section.contacto {
   border-radius: 15px;
   max-width: 900px;
-  margin: 0 auto 40px; // margen abajo para separar de lo siguiente
+  margin: 0 auto 40px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +22,7 @@ section.contacto {
 }
 
 .informacion {
-  background-color: #B14890;
+  background-color: $primary-color;
   border-radius: 15px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   width: 100%;
@@ -53,24 +53,6 @@ section.contacto {
   }
 }
 
-a.btn.btn-success {
-  background-color: #25D366;  // verde WhatsApp fijo
-  color: white;
-  padding: 12px 30px;
-  font-size: $tamano-texto-md;
-  border-radius: 10px;
-  max-width: 200px;
-  width: 100%;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.05);  // pequeño zoom
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.6); // sombra verde suave
-  }
-}
-
 .instagram-container {
   width: 100%;
   max-width: 600px;
@@ -98,7 +80,7 @@ a.btn.btn-success {
       display: inline-block;
       margin-top: 1rem;
       color: #fff;
-      background-color: #e67e99;
+      background-color: $secondary-color;
       padding: 0.5rem 1rem;
       border-radius: 10px;
       text-decoration: none;
@@ -107,7 +89,7 @@ a.btn.btn-success {
 
     .boton-instagram {
   display: inline-block;
-  background-color: #e1306c; // color típico de Instagram
+  background-color: $primary-color; 
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 10px;
@@ -116,8 +98,25 @@ a.btn.btn-success {
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #c1275a;
+    background-color: $primary-color;
   }
 }
 
+a.boton-whatsapp {
+  background-color: $contact-btn-success-bg-color;
+  color: white;
+  padding: 12px 30px;
+  font-size: $tamano-texto-md;
+  border-radius: 10px;
+  max-width: 200px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);  // pequeño zoom
+    box-shadow: $contact-btn-success-bg-color
+  }
+}
 

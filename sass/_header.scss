@@ -8,6 +8,10 @@ body {
   width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 nav {
   @include flex-center(row, space-between, center, 1.25rem);
   background-color: $secondary-color !important;
@@ -15,7 +19,6 @@ nav {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 5px;
-  word-spacing: 90px;
   font-size: 3rem;
   width: 100%;
   padding: 15px 20px;
@@ -25,8 +28,8 @@ nav {
     height: 100px;
   }
 
-  .menu {
-    @include flex-center(row, center, center, 5rem);
+  .nav-menu {
+    @include flex-center(row, center, center, 4rem);
     flex-grow: 1;
     width: 100%;
 
@@ -36,6 +39,11 @@ nav {
       font-size: 25px;
       font-weight: bold;
       text-transform: uppercase;
+    }
+
+    li {
+      color: white;
+      text-decoration: underline;
     }
   }
 }
@@ -75,11 +83,39 @@ nav {
   }
 }
 
-li {
-  color: white;
-  text-decoration: underline;
-}
+nav {
+    display: flex;
+    font-family: $font-family-main;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    word-spacing: 90px;
+    text-decoration: none;
+    font-size: 20px;
+    width: 100%;
+    padding: 15px 20px;
+    background: $primary-color; // corregido
 
-html {
-      scroll-behavior: smooth;
+    .logo img {
+        display: block;
+        height: 100px;
     }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        gap: 80px;
+        width: 100%;
+    }
+
+    .menu a {
+        color: $color-titulo;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

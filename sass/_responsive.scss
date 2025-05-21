@@ -1,166 +1,19 @@
 @use 'sass:color';
 @use 'variables' as *;
 
-// Estilos base: mobile first
+// ------------------------------
+// 1. ESTILOS BASE
+// ------------------------------
+
 body {
   font-size: 1rem;
 }
 
-// MÓVIL (hasta 576px)
-@media (max-width: 576px) {
-  nav .menu {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .titulosecundario,
-  .titulosecundarioservicios {
-    width: 100%;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-
-  .contenedor-flex {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .contenedor-flex .imageninicio,
-  .contenedor-flex .fondorosa {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .lista {
-    width: 100%;
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .contenedor {
-    display: flex;
-    flex-direction: column;
-    padding: 0 1rem;
-    box-sizing: border-box;
-  }
-
-  .columna {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .lista {
-    width: 100%;
-    padding-left: 3rem; // para que el ul no quede pegado a la izquierda
-    box-sizing: border-box;
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-
-  .serviciobasico,
-  .serviciocompleto {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .tituloprincipalinicio,
-  .tituloprincipalinicioservicios,
-  .reservesuturno,
-  .galeria h1,
-  .contacto h1 {
-    font-size: 2rem !important; // o ajustalo según necesites
-    text-align: center;
-    white-space: normal; // permite que el texto baje de línea
-    padding: 0 1rem;
-  }
-}
-
-// ---------------------------
-// TABLET (577px a 1199px)
-@media (min-width: 577px) and (max-width: 1199px) {
-  nav .menu {
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-
-  .contenedor-flex {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contenedor-flex .fondorosa,
-  .contenedor-flex .imageninicio {
-    width: 80%;
-  }
-
-  .lista {
-    width: 80%;
-  }
-
-  .tituloprincipalinicio {
-    font-size: 2rem;   
-    text-align: center;
-    white-space: normal;
-    padding: 1rem;
-    margin-bottom: 2rem;
-  }
-
-.tituloprincipalinicioservicios {
-  font-size: clamp(1.5rem, 2.5vw, 3rem) !important;
-  }
-
-
-  .galeria h1,
-  .contacto h1 {
-    font-size: 3rem;
-  }
-}
-
-// ---------------------------
-// DESKTOP (992px o más)
-@media (min-width: 992px) {
-  nav .menu {
-    flex-direction: row;
-    gap: 5rem;
-  }
-
-  .contenedor-flex {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .contenedor-flex .fondorosa {
-    max-width: 450px;
-    margin-left: 6rem;
-  }
-
-  .contenedor-flex .imageninicio {
-    width: 55%;
-    max-width: 700px; 
-    margin-top: 2rem; 
-  }
-
-  .lista {
-    width: 500px;
-  }
-
-  .galeria h1,
-  .contacto h1 {
-    font-size: 4rem;
-  }
-}
+// ------------------------------
+// 2. COMPONENTES
+// ------------------------------
 
 // NAV
-// ------------------
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -229,26 +82,91 @@ nav {
   }
 }
 
-// Responsive para Agenda
+// ------------------------------
+// 3. RESPONSIVE DESIGN
+// ------------------------------
 
-// MOBILE (hasta 576px)
+// ======= MOBILE (max 576px) =======
 @media (max-width: 576px) {
+  nav .menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .titulosecundario,
+  .titulosecundarioservicios {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .tituloprincipalinicio {
+    font-size: 2rem;
+    text-align: center;
+    white-space: normal;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contenedor-flex {
+    flex-direction: column;
+    padding: 1rem;
+
+    .imageninicio,
+    .fondorosa {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .columna {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .lista {
+    width: 100%;
+    padding: 1rem 3rem;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .serviciobasico,
+  .serviciocompleto {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
   .reservesuturno {
-    font-size: 1.5rem; // un tamaño legible para móvil
+    font-size: 1.5rem;
     padding: 0.5rem;
   }
 
   form {
     max-width: 100%;
     padding: 1rem;
-    box-shadow: none; // para que no se vea tan cargado en móvil
+    box-shadow: none;
   }
 
   .forminput {
     padding: 8px 12px;
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-size: 1rem;
   }
 
@@ -275,8 +193,59 @@ nav {
   }
 }
 
-// TABLET (577px a 1199px)
-@media (min-width: 577px) and (max-width: 1199px) {
+// ======= TABLET (768px - 1366px) =======
+@media (min-width: 768px) and (max-width: 1366px) {
+  nav .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 0.1rem;
+    font-size: 0.85rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  nav .menu a {
+    flex: 0 0 auto; /* No dejar que se encogen */
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+
+  .contenedor-flex {
+    flex-direction: column;
+    align-items: center;
+
+    .fondorosa,
+    .imageninicio {
+      width: 80%;
+    }
+  }
+
+  .lista {
+    width: 80%;
+  }
+
+  .tituloprincipalinicio {
+    font-size: 2rem;
+    text-align: center;
+    white-space: normal;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .tituloprincipalinicioservicios {
+    font-size: clamp(1.5rem, 2.5vw, 3rem) !important;
+  }
+
+  .galeria h1,
+  .contacto h1 {
+    font-size: 3rem;
+  }
+
   .reservesuturno {
     font-size: 3rem;
   }
@@ -287,7 +256,8 @@ nav {
     box-shadow: $form-box-shadow;
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-size: 1.1rem;
   }
 
@@ -312,10 +282,40 @@ nav {
     font-size: 1.1rem;
     padding: 0.6rem 1rem;
   }
-}
 
-// DESKTOP (992px o más)
+
+// ======= DESKTOP (992px en adelante) =======
 @media (min-width: 992px) {
+  nav .menu {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .contenedor-flex {
+    flex-direction: row;
+    align-items: flex-start;
+
+    .fondorosa {
+      max-width: 450px;
+      margin-left: 6rem;
+    }
+
+    .imageninicio {
+      width: 55%;
+      max-width: 700px;
+      margin-top: 2rem;
+    }
+  }
+
+  .lista {
+    width: 500px;
+  }
+
+  .galeria h1,
+  .contacto h1 {
+    font-size: 4rem;
+  }
+
   .reservesuturno {
     font-size: 4rem;
   }
@@ -326,7 +326,8 @@ nav {
     box-shadow: $form-box-shadow;
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-size: 1.2rem;
   }
 
