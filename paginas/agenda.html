@@ -7,60 +7,90 @@
     <title>Agenda</title>
 </head>
 <body>
-    <header>
-        <nav id="menu">
-  <div class="logo">
-    <img src="../imagenes/amorcanino.png" alt="Logo de Amor Canino" />
-  </div>
+<header>
+    <nav id="menu">
+    <div class="logo">
+        <img src="../imagenes/amorcanino.png" alt="Logo de Amor Canino" />
+    </div>
 
-  <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú">☰</button>
+    <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú">☰</button>
+    <div class="menu" id="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="agenda.html">Agenda</a>
+    </div>
+    </nav>
+</header>
 
-  <div class="menu" id="nav-links">
-<a href="../index.html">Inicio</a>
-<a href="servicios.html">Servicios</a>
-<a href="galeria.html">Galería</a>
-<a href="contacto.html">Contacto</a>
-<a href="agenda.html">Agenda</a>
-  </div>
-</nav>
-    </header>
-    <main>
-        <h1 class="reservesuturno">Reserve su turno</h1>
-        <form name="Formulario" method="post" action="/enviar">
-            <h2>Formulario de Contacto</h2>
-            
-            <div class="forminput">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Primer nombre y apellido" required>
-            </div>
+<main>
+    <h1 class="reservesuturno">Reserve su turno</h1>
+    <form name="Formulario" method="post" action="/enviar">
+    <h2>Formulario de Contacto</h2>
 
-            <div class="forminput">
-                <label for="telefono">Número de contacto</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Celular" required>
-            </div>
+    <div class="forminput">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Primer nombre y apellido" required>
+    </div>
 
-            <div class="forminput">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Dejá tu mensaje..." required></textarea>
-            </div>
+    <div class="forminput">
+        <label for="telefono">Número de contacto</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Celular" required>
+    </div>
 
-            <div class="enviar" style="text-align: center;">
-                <button type="submit">ENVIAR</button>
-            </div>
-        </form>
-    </main>
-    <footer>
-        <a href="#menu" class="volver-arriba">↑ Volver al Menú</a>
-        <p>Montevideo, Uruguay</p>
-        <p>Copyright ® 2025 - Todos los derechos reservados.</p>
-    </footer>
-    <script>
-  const btnMenu = document.getElementById('btn-menu');
-  const navLinks = document.getElementById('nav-links');
+    <div class="forminput">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Dejá tu mensaje..." required></textarea>
+    </div>
 
-  btnMenu.addEventListener('click', () => {
+    <div class="enviar" style="text-align: center;">
+        <button type="submit">ENVIAR</button>
+    </div>
+
+    <!-- Mensaje de confirmación (oculto por defecto) -->
+    <p id="gracias" style="display: none; color: green; text-align: center; margin-top: 15px;">
+        ¡Gracias! Se abrirá WhatsApp para enviar tu mensaje.
+    </p>
+    </form>
+</main>
+
+<footer>
+    <a href="#menu" class="volver-arriba">↑ Volver al Menú</a>
+    <p>Montevideo, Uruguay</p>
+    <p>Copyright ® 2025 - Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    const btnMenu = document.getElementById('btn-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    btnMenu.addEventListener('click', () => {
     navLinks.classList.toggle('activo');
-  });
+    });
+
+    // Script para enviar los datos por WhatsApp
+    const formulario = document.forms["Formulario"];
+    formulario.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    const texto = `Hola! Soy ${nombre}, mi número es ${telefono}. Quisiera: ${mensaje}`;
+    const numeroTia = "59891234567"; // ← CAMBIÁ este número por el WhatsApp real de tu tía
+    const url = `https://wa.me/${numeroTia}?text=${encodeURIComponent(texto)}`;
+
+      // Mostrar mensaje de confirmación
+    document.getElementById("gracias").style.display = "block";
+
+      // Abrir WhatsApp en una nueva pestaña
+    window.open(url, "_blank");
+
+      // Opcional: limpiar el formulario
+    formulario.reset();
+    });
 </script>
 </body>
 </html>
